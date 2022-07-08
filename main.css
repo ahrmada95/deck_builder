@@ -24,6 +24,7 @@ body {
     height: 100px;
     width: 400px;
 }
+
 @font-face {
     font-family: title-text;
     src: url("./assets/fonts/Yu-Gi-Oh! Matrix Regular Small Caps 1.ttf");
