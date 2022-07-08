@@ -17,3 +17,9 @@ Yu-Gi-Oh! Pro Deck API
 
 Challenges:
 - Handling the complex data-base requirements (sections, within sections, within sections) while also holding functionality for GET, POST, PATCH, DELTE. 
+
+FONT GUIDE:
+Card names: Matrix Regular Small Caps 1
+Card Attack/Def: Matrix Regular Small Caps 2
+Card Effects: Matrix Book
+Types/Attributes: ITC Stone Serif Small Caps Bold
