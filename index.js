@@ -30,6 +30,7 @@ const testCardView = async (cardNameorId) => {
     let cardTitle = document.createElement('h1');
     let cardImg = document.createElement('img');
     let cardDesc = document.createElement('p');
+    cardDesc.classList.add('card-name-text');
     //undefined var
     let cardSearched; 
     //check to see if it is a number or not
@@ -44,7 +45,7 @@ const testCardView = async (cardNameorId) => {
     cardTitle.textContent = cardSearched['name'];
     //cardImg.src = 'https://storage.googleapis.com/ygoprodeck.com/pics/86066372.jpg'
     cardImg.src = cardSearched['card_images']['0']['image_url'];
-    cardDesc = cardSearched['desc'];
+    cardDesc.textContent = cardSearched['desc'];
     document.body.append(cardTitle, cardImg, cardDesc);
 }
 const print = async () => {
