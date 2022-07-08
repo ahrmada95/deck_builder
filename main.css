@@ -2,11 +2,9 @@ body {
     background-color: antiquewhite;
 }
 
-<<<<<<< HEAD
 #deck-builder {
     background-color: black;   
 }
-=======
 @font-face {
     font-family: title-text;
     src: url("./assets/fonts/Yu-Gi-Oh! Matrix Regular Small Caps 1.ttf");
@@ -40,4 +38,3 @@ body {
 .properties-text {
     font-family: properties-text;
 }
->>>>>>> refs/remotes/origin/main
