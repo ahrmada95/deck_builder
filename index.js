@@ -30,7 +30,7 @@ const testCardView = async (cardNameorId) => {
     let cardTitle = document.createElement('h1');
     let cardImg = document.createElement('img');
     let cardDesc = document.createElement('p');
-    cardDesc.classList.add('card-name-text');
+    cardDesc.classList.add('effect-text');
     //undefined var
     let cardSearched; 
     //check to see if it is a number or not
