@@ -9,20 +9,64 @@ body {
     display: flex;
     justify-content: center;
 }
-#deck-builder {
+
+.deck-builder {
+    display: grid;
     float: left;
     background-color: black;
     /* margin-top: 50px; */
-    height: 100px;
-    width: 1000px;   
+    width: fit-content;
+    height: fit-content;
+    padding: 2.5px;   
+}
+
+#main-deck{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#extra-deck {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: purple;
+}
+
+#side-deck {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: orange;
+}
+
+#deck-builder-img {
+    margin: 2.5px;
+    width: 80px;
+}
+
+#deck-builder-img:hover {
+    filter:brightness(150%);
+}
+
+#extra-deck-img {
+    margin: 1px;
+    width: 54.5px;
+}
+
+#extra-deck-img:hover {
+    filter:brightness(150%);
 }
 
 #card-viewer {
     float: left; 
     background-color: gray;
+    padding-left: 10px;
     /* margin-top: 50px; */
-    height: 100px;
-    width: 400px;
+    width: 500px;
+    text-align: left;
+}
+#card-viewer-img {
+    display: block;
+    align-self: center;
+    margin: auto;
+    width: 300px;
 }
 
 @font-face {
