@@ -750,6 +750,69 @@
                 "race": "Normal",
                 "imageUrl": "https://ygoprodeck.com/pics/15693423.jpg"
             },
+            {
+                "id": 9,
+                "cardId": 58921041,
+                "name": "Anti-Spell Fragrance",
+                "type": "Trap Card",
+                "desc": "Both players must Set Spell Cards before activating them, and cannot activate them until their next turn after Setting them.",
+                "race": "Continuous",
+                "imageUrl": "https://ygoprodeck.com/pics/58921041.jpg"
+            },
+            {
+                "id": 10,
+                "cardId": 58921041,
+                "name": "Anti-Spell Fragrance",
+                "type": "Trap Card",
+                "desc": "Both players must Set Spell Cards before activating them, and cannot activate them until their next turn after Setting them.",
+                "race": "Continuous",
+                "imageUrl": "https://ygoprodeck.com/pics/58921041.jpg"
+            },
+            {
+                "id": 11,
+                "cardId": 58921041,
+                "name": "Anti-Spell Fragrance",
+                "type": "Trap Card",
+                "desc": "Both players must Set Spell Cards before activating them, and cannot activate them until their next turn after Setting them.",
+                "race": "Continuous",
+                "imageUrl": "https://ygoprodeck.com/pics/58921041.jpg"
+            },
+            {
+                "id": 12,
+                "cardId": 90846359,
+                "name": "Rivalry of Warlords",
+                "type": "Trap Card",
+                "desc": "Each player can only control 1 Type of monster. Send all other face-up monsters they control to the GY.",
+                "race": "Continuous",
+                "imageUrl": "https://ygoprodeck.com/pics/90846359.jpg"
+            },
+            {
+                "id": 13,
+                "cardId": 90846359,
+                "name": "Rivalry of Warlords",
+                "type": "Trap Card",
+                "desc": "Each player can only control 1 Type of monster. Send all other face-up monsters they control to the GY.",
+                "race": "Continuous",
+                "imageUrl": "https://ygoprodeck.com/pics/90846359.jpg"
+            },
+            {
+                "id": 14,
+                "cardId": 90846359,
+                "name": "Rivalry of Warlords",
+                "type": "Trap Card",
+                "desc": "Each player can only control 1 Type of monster. Send all other face-up monsters they control to the GY.",
+                "race": "Continuous",
+                "imageUrl": "https://ygoprodeck.com/pics/90846359.jpg"
+            },
+            {
+                "id": 15,
+                "cardId": 23002292,
+                "name": "Red Reboot",
+                "type": "Trap Card",
+                "desc": "When your opponent activates a Trap Card: Negate the activation, and if you do, Set that card face-down, then they can Set 1 other Trap directly from their Deck. For the rest of this turn after this card resolves, your opponent cannot activate Trap Cards. You can activate this card from your hand by paying half your LP.",
+                "race": "Counter",
+                "imageUrl": "https://ygoprodeck.com/pics/23002292.jpg"
+            }
         ]
     },
     "testDeck2": {
