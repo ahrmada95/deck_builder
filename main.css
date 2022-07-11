@@ -36,21 +36,21 @@ body {
     background-color: orange;
 }
 
-#deck-builder-img {
+.deck-builder-img {
     margin: 2.5px;
     width: 80px;
 }
 
-#deck-builder-img:hover {
+.deck-builder-img:hover {
     filter:brightness(150%);
 }
 
-#extra-deck-img {
+.extra-deck-img {
     margin: 1px;
     width: 54.5px;
 }
 
-#extra-deck-img:hover {
+.extra-deck-img:hover {
     filter:brightness(150%);
 }
 

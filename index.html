@@ -5,6 +5,15 @@
         <link rel="stylesheet" href="./main.css"/>
     </head>
     <body>
+        <div id="menu-bar">
+            <form id="deck-form">
+                <label for="decks">Choose a Deck:</label>
+                <select id="decks" name="deck-selector">
+                    <option value="http://localhost:3000/testDeck">Test Deck</option>
+                    <option value="http://localhost:3000/testDeck2">Test Deck 2</option>
+                </select>
+            </form>
+        </div>
         <div id="container">
             <div class="deck-builder">
                 <div name="Main Deck" class="deck-builder" id="main-deck"></div>

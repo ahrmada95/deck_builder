@@ -13,9 +13,6 @@ const CardViewerDef = document.querySelector("#card-viewer > span > p:nth-child(
 
 
 
-
-const sampleLink = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Accesscode%20Talker';
-
 //fetch request to search by card's name
 const fetchByName = async (cardName) => {
     //request from api
@@ -58,10 +55,6 @@ const testCardView = async (cardNameorId) => {
     cardDesc.textContent = cardSearched['desc'];
     document.body.append(cardTitle, cardImg, cardDesc);
 }
-const print = async () => {
-    let x = await fetchByName('Accesscode Talker');
-    console.log(x);
-}
 
 // const deckCount = 40;
 // const exDeckCount = 15;
@@ -98,8 +91,8 @@ let sideDeck = document.getElementById('side-deck');
 //     })
 // }
 
-const getDeckSource = async () => {
-    let req = await fetch("http://localhost:3000/testDeck");
+const getDeckSource = async (url) => {
+    let req = await fetch(url);
     let res = await req.json();
     return res;
 }
@@ -111,22 +104,23 @@ const populateDeck = async (inputDeck) => {
     let extraSize = 0;
     let sideSize = 0;
 
-    console.log(deckSource)
-
-    if (deckSource.mainDeck != null) {
-        mainSize = deckSource.mainDeck.length;
+    if (deckSource.sideDeck != null) {
+        sideSize = deckSource.sideDeck.length;
+        if (sideSize > 0) cardViewer.src = deckSource.sideDeck[0].imageUrl;
     }
     if (deckSource.extraDeck != null) {
         extraSize = deckSource.extraDeck.length;
+        if (extraSize > 0) cardViewer.src = deckSource.extraDeck[0].imageUrl
     }
-    if (deckSource.sideDeck != null) {
-        sideSize = deckSource.sideDeck.length;
+    if (deckSource.mainDeck != null) {
+        mainSize = deckSource.mainDeck.length;
+        if (mainSize > 0) cardViewer.src = deckSource.mainDeck[0].imageUrl
     }
 
     for (let a = 0; a < mainSize; a++) {
         let tempImg = document.createElement('img');
         tempImg.src = deckSource.mainDeck[a].imageUrl;
-        tempImg.id = 'deck-builder-img';
+        tempImg.classList.add('deck-builder-img');
         mainDeck.append(tempImg);
         tempImg.addEventListener('click', () => {
             cardViewer.src = tempImg.src;
@@ -134,8 +128,8 @@ const populateDeck = async (inputDeck) => {
     }
     for (let b = 0; b < extraSize; b++) {
         let tempImg = document.createElement('img');
-        tempImg.src = './assets/img/EHeroAbsZero.png';
-        tempImg.id = 'extra-deck-img';
+        tempImg.src = deckSource.extraDeck[b].imageUrl;
+        tempImg.classList.add('extra-deck-img')
         extraDeck.append(tempImg);
         tempImg.addEventListener('click', () => {
             cardViewer.src = tempImg.src;
@@ -143,8 +137,8 @@ const populateDeck = async (inputDeck) => {
     }
     for (let c = 0; c < sideSize; c++) {
         let tempImg = document.createElement('img');
-        tempImg.src = './assets/img/RivalryOfWarlords.jpg';
-        tempImg.id = 'extra-deck-img';
+        tempImg.src = deckSource.sideDeck[c].imageUrl;
+        tempImg.classList.add('extra-deck-img')
         sideDeck.append(tempImg);
         tempImg.addEventListener('click', () => {
             cardViewer.src = tempImg.src;
@@ -152,4 +146,19 @@ const populateDeck = async (inputDeck) => {
     }
 }
 
-populateDeck(getDeckSource())
+
+const clearDecks = () => {
+    mainDeck.innerHTML = ''
+    extraDeck.innerHTML = ''
+    sideDeck.innerHTML = ''
+}
+
+const deckForm = document.getElementById("deck-form")
+
+populateDeck(getDeckSource(deckForm.decks.value))
+
+
+deckForm.addEventListener('change', () => {
+    clearDecks()
+    populateDeck(getDeckSource(deckForm.decks.value))
+})
