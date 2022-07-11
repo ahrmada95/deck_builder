@@ -102,6 +102,14 @@ body {
     display: flex;
 }
 
+#atk-def {
+    display: inline-flex;
+}
+
+#def {
+    padding-left: 10px;
+}
+
 .effect-text {
     font-family: effect-text;
     display: flex;
@@ -121,3 +129,4 @@ body {
     width: 300px;
     font-family: effect-text;
 }
+
