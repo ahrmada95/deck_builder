@@ -678,7 +678,78 @@
             }         
         ],
         "sideDeck": [
-    
+            {
+                "id": 1,
+                "cardId": 43898403,
+                "name": "Twin Twisters",
+                "type": "Spell Card",
+                "desc": "Discard 1 card, then target up to 2 Spells/Traps on the field; destroy them.",
+                "race": "Quick-Play",
+                "imageUrl": "https://ygoprodeck.com/pics/43898403.jpg"
+            },
+            {
+                "id": 2,
+                "cardId": 43898403,
+                "name": "Twin Twisters",
+                "type": "Spell Card",
+                "desc": "Discard 1 card, then target up to 2 Spells/Traps on the field; destroy them.",
+                "race": "Quick-Play",
+                "imageUrl": "https://ygoprodeck.com/pics/43898403.jpg"
+            },
+            {
+                "id": 3,
+                "cardId": 65681983,
+                "name": "Crossout Designator",
+                "type": "Spell Card",
+                "desc": "Declare 1 card name; banish 1 of that declared card from your Main Deck, and if you do, negate its effects, as well as the activated effects and effects on the field of cards with the same original name, until the end of this turn. You can only activate 1 \"Crossout Designator\" per turn.",
+                "race": "Quick-Play",
+                "imageUrl": "https://ygoprodeck.com/pics/65681983.jpg"
+            },
+            {
+                "id": 4,
+                "cardId": 65681983,
+                "name": "Crossout Designator",
+                "type": "Spell Card",
+                "desc": "Declare 1 card name; banish 1 of that declared card from your Main Deck, and if you do, negate its effects, as well as the activated effects and effects on the field of cards with the same original name, until the end of this turn. You can only activate 1 \"Crossout Designator\" per turn.",
+                "race": "Quick-Play",
+                "imageUrl": "https://ygoprodeck.com/pics/65681983.jpg"
+            },
+            {
+                "id": 5,
+                "cardId": 65681983,
+                "name": "Crossout Designator",
+                "type": "Spell Card",
+                "desc": "Declare 1 card name; banish 1 of that declared card from your Main Deck, and if you do, negate its effects, as well as the activated effects and effects on the field of cards with the same original name, until the end of this turn. You can only activate 1 \"Crossout Designator\" per turn.",
+                "race": "Quick-Play",
+                "imageUrl": "https://ygoprodeck.com/pics/65681983.jpg"
+            },
+            {
+                "id": 6,
+                "cardId": 15693423,
+                "name": "Evenly Matched",
+                "type": "Trap Card",
+                "desc": "At the end of the Battle Phase, if your opponent controls more cards than you do: You can make your opponent banish cards from their field face-down so they control the same number of cards as you do. If you control no cards, you can activate this card from your hand.",
+                "race": "Normal",
+                "imageUrl": "https://ygoprodeck.com/pics/15693423.jpg"
+            },
+            {
+                "id": 7,
+                "cardId": 15693423,
+                "name": "Evenly Matched",
+                "type": "Trap Card",
+                "desc": "At the end of the Battle Phase, if your opponent controls more cards than you do: You can make your opponent banish cards from their field face-down so they control the same number of cards as you do. If you control no cards, you can activate this card from your hand.",
+                "race": "Normal",
+                "imageUrl": "https://ygoprodeck.com/pics/15693423.jpg"
+            },
+            {
+                "id": 8,
+                "cardId": 15693423,
+                "name": "Evenly Matched",
+                "type": "Trap Card",
+                "desc": "At the end of the Battle Phase, if your opponent controls more cards than you do: You can make your opponent banish cards from their field face-down so they control the same number of cards as you do. If you control no cards, you can activate this card from your hand.",
+                "race": "Normal",
+                "imageUrl": "https://ygoprodeck.com/pics/15693423.jpg"
+            },
         ]
     },
     "testDeck2": {
