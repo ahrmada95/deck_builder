@@ -7,9 +7,9 @@ const baseUrlImg = 'https://ygoprodeck.com/pics/';
 const cardViewer = document.querySelector('#card-viewer-img');
 const cardViewerName = document.querySelector("#card-viewer > h1");
 const cardViewerProperties = document.querySelector("#card-viewer > p.properties-text");
-const CardViewerEffects = document.querySelector("#card-viewer > p.effect-text");
-const CardViewerAtk = document.querySelector("#card-viewer > span > p:nth-child(1)");
-const CardViewerDef = document.querySelector("#card-viewer > span > p:nth-child(2)");
+const cardViewerEffects = document.querySelector("#card-viewer > p.effect-text");
+const cardViewerAtk = document.querySelector("#card-viewer > span > p:nth-child(1)");
+const cardViewerDef = document.querySelector("#card-viewer > span > p:nth-child(2)");
 
 
 
@@ -52,8 +52,11 @@ const testCardView = async (cardNameorId) => {
     cardTitle.textContent = cardSearched['name'];
     //cardImg.src = 'https://storage.googleapis.com/ygoprodeck.com/pics/86066372.jpg'
     cardImg.src = `https://ygoprodeck.com/pics/${cardSearched['id']}.jpg`;
-    cardDesc.textContent = cardSearched['desc'];
-    document.body.append(cardTitle, cardImg, cardDesc);
+    
+// const cardViewerProperties = document.querySelector("#card-viewer > p.properties-text");
+// const CardViewerEffects = document.querySelector("#card-viewer > p.effect-text");
+// const CardViewerAtk = document.querySelector("#card-viewer > span > p:nth-child(1)");
+// const CardViewerDef = document.querySelector("#card-viewer > span > p:nth-child(2)");
 }
 
 // const deckCount = 40;
@@ -98,7 +101,7 @@ const getDeckSource = async (url) => {
 }
 
 const populateDeck = async (inputDeck) => {
-    const deckSource = await inputDeck
+    const deckSource = await inputDeck;
 
     let mainSize = 0;
     let extraSize = 0;
@@ -122,8 +125,22 @@ const populateDeck = async (inputDeck) => {
         tempImg.src = deckSource.mainDeck[a].imageUrl;
         tempImg.classList.add('deck-builder-img');
         mainDeck.append(tempImg);
-        tempImg.addEventListener('click', () => {
+        let click_shit = tempImg.addEventListener('click', () => {
             cardViewer.src = tempImg.src;
+            cardViewerName.textContent = deckSource.mainDeck[a]['name'];
+            cardViewerProperties.textContent = `${deckSource.mainDeck[a]['race']}/${deckSource.mainDeck[a]['type']}`;
+            cardViewerEffects.textContent = `${deckSource.mainDeck[a]['desc']}`;
+            if(deckSource.mainDeck[a]['type'] != "Spell Card" && deckSource.mainDeck[a]['type'] != "Trap Card") {
+                cardViewerAtk.textContent = `ATK/${deckSource.mainDeck[a]['atk']}`;
+                if(deckSource.mainDeck[a]['type']!='Link Monster') {
+                    cardViewerDef.textContent = `DEF/${deckSource.mainDeck[a]['def']}`;
+                }
+            }
+        })
+        tempImg.addEventListener('contextmenu', event => {
+            event.preventDefault();
+            tempImg.remove();
+            tempImg.removeEventListener(click_shit);
         })
     }
     for (let b = 0; b < extraSize; b++) {

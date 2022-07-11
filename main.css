@@ -99,10 +99,12 @@ body {
 
 .card-stats-text {
     font-family: stats-text;
+    display: flex;
 }
 
 .effect-text {
     font-family: effect-text;
+    display: flex;
 }
 
 .properties-text {
