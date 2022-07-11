@@ -63,38 +63,93 @@ const print = async () => {
     console.log(x);
 }
 
-const deckCount = 40;
-const exDeckCount = 15;
+// const deckCount = 40;
+// const exDeckCount = 15;
 
 let mainDeck = document.getElementById('main-deck');
 let extraDeck = document.getElementById('extra-deck');
 let sideDeck = document.getElementById('side-deck');
 
-for (let a=0; a < deckCount; a++){
-    let tempImg = document.createElement('img');
-    tempImg.src='./assets/img/EHeroStratos.png';
-    tempImg.id= 'deck-builder-img';
-    mainDeck.append(tempImg);
-    tempImg.addEventListener('click', () => {
-        cardViewer.src = tempImg.src;
-    })
-}
-for (let b=0; b < exDeckCount; b++){
-    let tempImg = document.createElement('img');
-    tempImg.src='./assets/img/EHeroAbsZero.png';
-    tempImg.id= 'extra-deck-img';
-    extraDeck.append(tempImg);
-    tempImg.addEventListener('click', () => {
-        cardViewer.src = tempImg.src;
-    })    
-}
-for (let c=0; c < exDeckCount; c++){
-    let tempImg = document.createElement('img');
-    tempImg.src='./assets/img/RivalryOfWarlords.jpg';
-    tempImg.id= 'extra-deck-img';
-    sideDeck.append(tempImg);
-    tempImg.addEventListener('click', () => {
-        cardViewer.src = tempImg.src;
-    })
+// for (let a=0; a < deckCount; a++){
+//     let tempImg = document.createElement('img');
+//     tempImg.src='./assets/img/EHeroStratos.png';
+//     tempImg.id= 'deck-builder-img';
+//     mainDeck.append(tempImg);
+//     tempImg.addEventListener('click', () => {
+//         cardViewer.src = tempImg.src;
+//     })
+// }
+// for (let b=0; b < exDeckCount; b++){
+//     let tempImg = document.createElement('img');
+//     tempImg.src='./assets/img/EHeroAbsZero.png';
+//     tempImg.id= 'extra-deck-img';
+//     extraDeck.append(tempImg);
+//     tempImg.addEventListener('click', () => {
+//         cardViewer.src = tempImg.src;
+//     })    
+// }
+// for (let c=0; c < exDeckCount; c++){
+//     let tempImg = document.createElement('img');
+//     tempImg.src='./assets/img/RivalryOfWarlords.jpg';
+//     tempImg.id= 'extra-deck-img';
+//     sideDeck.append(tempImg);
+//     tempImg.addEventListener('click', () => {
+//         cardViewer.src = tempImg.src;
+//     })
+// }
+
+const getDeckSource = async () => {
+    let req = await fetch("http://localhost:3000/testDeck");
+    let res = await req.json();
+    return res;
 }
 
+const populateDeck = async (inputDeck) => {
+    const deckSource = await inputDeck
+
+    let mainSize = 0;
+    let extraSize = 0;
+    let sideSize = 0;
+
+    console.log(deckSource)
+
+    if (deckSource.mainDeck != null) {
+        mainSize = deckSource.mainDeck.length;
+    }
+    if (deckSource.extraDeck != null) {
+        extraSize = deckSource.extraDeck.length;
+    }
+    if (deckSource.sideDeck != null) {
+        sideSize = deckSource.sideDeck.length;
+    }
+
+    for (let a = 0; a < mainSize; a++) {
+        let tempImg = document.createElement('img');
+        tempImg.src = deckSource.mainDeck[a].imageUrl;
+        tempImg.id = 'deck-builder-img';
+        mainDeck.append(tempImg);
+        tempImg.addEventListener('click', () => {
+            cardViewer.src = tempImg.src;
+        })
+    }
+    for (let b = 0; b < extraSize; b++) {
+        let tempImg = document.createElement('img');
+        tempImg.src = './assets/img/EHeroAbsZero.png';
+        tempImg.id = 'extra-deck-img';
+        extraDeck.append(tempImg);
+        tempImg.addEventListener('click', () => {
+            cardViewer.src = tempImg.src;
+        })
+    }
+    for (let c = 0; c < sideSize; c++) {
+        let tempImg = document.createElement('img');
+        tempImg.src = './assets/img/RivalryOfWarlords.jpg';
+        tempImg.id = 'extra-deck-img';
+        sideDeck.append(tempImg);
+        tempImg.addEventListener('click', () => {
+            cardViewer.src = tempImg.src;
+        })
+    }
+}
+
+populateDeck(getDeckSource())
