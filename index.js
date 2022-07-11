@@ -2,6 +2,17 @@
 const baseUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?';
 const urlCardName = `${baseUrl}name=`;
 const urlCardId = `${baseUrl}id=`;
+const baseUrlImg = 'https://ygoprodeck.com/pics/'; 
+
+const cardViewer = document.querySelector('#card-viewer-img');
+const cardViewerName = document.querySelector("#card-viewer > h1");
+const cardViewerProperties = document.querySelector("#card-viewer > p.properties-text");
+const CardViewerEffects = document.querySelector("#card-viewer > p.effect-text");
+const CardViewerAtk = document.querySelector("#card-viewer > span > p:nth-child(1)");
+const CardViewerDef = document.querySelector("#card-viewer > span > p:nth-child(2)");
+
+
+
 
 const sampleLink = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Accesscode%20Talker';
 
@@ -25,7 +36,6 @@ const fetchByID = async (cardId) => {
     return res['data']['0'];
 }
 
-
 const testCardView = async (cardNameorId) => {
     let cardTitle = document.createElement('h1');
     let cardImg = document.createElement('img');
@@ -44,7 +54,7 @@ const testCardView = async (cardNameorId) => {
 
     cardTitle.textContent = cardSearched['name'];
     //cardImg.src = 'https://storage.googleapis.com/ygoprodeck.com/pics/86066372.jpg'
-    cardImg.src = cardSearched['card_images']['0']['image_url'];
+    cardImg.src = `https://ygoprodeck.com/pics/${cardSearched['id']}.jpg`;
     cardDesc.textContent = cardSearched['desc'];
     document.body.append(cardTitle, cardImg, cardDesc);
 }
@@ -53,4 +63,38 @@ const print = async () => {
     console.log(x);
 }
 
-//testCardView('Number 39: Utopia');
+const deckCount = 40;
+const exDeckCount = 15;
+
+let mainDeck = document.getElementById('main-deck');
+let extraDeck = document.getElementById('extra-deck');
+let sideDeck = document.getElementById('side-deck');
+
+for (let a=0; a < deckCount; a++){
+    let tempImg = document.createElement('img');
+    tempImg.src='./assets/img/EHeroStratos.png';
+    tempImg.id= 'deck-builder-img';
+    mainDeck.append(tempImg);
+    tempImg.addEventListener('click', () => {
+        cardViewer.src = tempImg.src;
+    })
+}
+for (let b=0; b < exDeckCount; b++){
+    let tempImg = document.createElement('img');
+    tempImg.src='./assets/img/EHeroAbsZero.png';
+    tempImg.id= 'extra-deck-img';
+    extraDeck.append(tempImg);
+    tempImg.addEventListener('click', () => {
+        cardViewer.src = tempImg.src;
+    })    
+}
+for (let c=0; c < exDeckCount; c++){
+    let tempImg = document.createElement('img');
+    tempImg.src='./assets/img/RivalryOfWarlords.jpg';
+    tempImg.id= 'extra-deck-img';
+    sideDeck.append(tempImg);
+    tempImg.addEventListener('click', () => {
+        cardViewer.src = tempImg.src;
+    })
+}
+
