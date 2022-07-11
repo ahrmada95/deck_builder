@@ -500,7 +500,7 @@
                 "attribute": "EARTH",
                 "archetype": "Tenyi",
                 "imageUrl": "https://ygoprodeck.com/pics/32519092.jpg"
-            }
+            },
             {
                 "id": 2,
                 "cardId": 32519092,
@@ -512,7 +512,7 @@
                 "attribute": "EARTH",
                 "archetype": "Tenyi",
                 "imageUrl": "https://ygoprodeck.com/pics/32519092.jpg"
-            }
+            },
             {
                 "id": 3,
                 "cardId": 32519092,
@@ -523,7 +523,7 @@
                 "race": "Wyrm",
                 "attribute": "EARTH",
                 "imageUrl": "https://ygoprodeck.com/pics/32519092.jpg"
-            }
+            },
             {
                 "id": 4,
                 "cardId": 78917791,
@@ -639,11 +639,181 @@
             },
             {
                 "id": 13,
-                "cardId": 
-            },          
+                "cardId": 47710198,
+                "name": "Swordsoul Sinister Sovereign - Qixing Longyuan",
+                "type": "Synchro Monster",
+                "desc": "1 Tuner + 1+ non-Tuner Wyrm monsters\r\nIf you Synchro Summon another Wyrm Synchro Monster: You can draw 1 card. If your opponent Special Summons a monster(s) (except during the Damage Step): You can banish 1 of them, and if you do, inflict 1200 damage to your opponent. When your opponent activates a Spell/Trap Card or effect (Quick Effect): You can banish that card, and if you do, inflict 1200 damage to your opponent. You can only use each effect of \"Swordsoul Sinister Sovereign - Qixing Longyuan\" once per turn.",
+                "atk": 2900,
+                "def": 2300,
+                "level": 10,
+                "race": "Wyrm",
+                "attribute": "FIRE",
+                "imageUrl": "https://ygoprodeck.com/pics/47710198.jpg"
+            },
+            {
+                "id": 14,
+                "cardId": 84815190,
+                "name": "Baronne de Fleur",
+                "type": "Synchro Monster",
+                "desc": "1 Tuner + 1+ non-Tuner monsters\r\nOnce per turn: You can target 1 card on the field; destroy it. Once while face-up on the field, when a card or effect is activated (Quick Effect): You can negate the activation, and if you do, destroy that card. You can only use the previous effect of \"Baronne de Fleur\" once per turn. Once per turn, during the Standby Phase: You can target 1 Level 9 or lower monster in your GY; return this card to the Extra Deck, and if you do, Special Summon that monster.",
+                "atk": 3000,
+                "def": 2400,
+                "level": 10,
+                "race": "Warrior",
+                "attribute": "WIND",
+                "imageUrl": "https://ygoprodeck.com/pics/84815190.jpg"
+            },
+            {
+                "id": 15,
+                "cardId": 96633955,
+                "name": "Swordsoul Supreme Sovereign - Chengying",
+                "type": "Synchro Monster",
+                "desc": "1 Tuner + 1+ non-Tuner monsters\r\nFor each banished card, this card gains 100 ATK/DEF and monsters your opponent controls lose 100 ATK/DEF. If this card would be destroyed by card effect, you can banish 1 card from your GY instead. If a card(s) is banished (except during the Damage Step): You can banish 1 card each from both your opponent's field and GY. You can only use this effect of \"Swordsoul Supreme Sovereign - Chengying\" once per turn.",
+                "atk": 3000,
+                "def": 3000,
+                "level": 10,
+                "race": "Wyrm",
+                "attribute": "WATER",
+                "imageUrl": "https://ygoprodeck.com/pics/96633955.jpg"
+
+            }          
         ],
         "sideDeck": [
-    
+            {
+                "id": 1,
+                "cardId": 43898403,
+                "name": "Twin Twisters",
+                "type": "Spell Card",
+                "desc": "Discard 1 card, then target up to 2 Spells/Traps on the field; destroy them.",
+                "race": "Quick-Play",
+                "imageUrl": "https://ygoprodeck.com/pics/43898403.jpg"
+            },
+            {
+                "id": 2,
+                "cardId": 43898403,
+                "name": "Twin Twisters",
+                "type": "Spell Card",
+                "desc": "Discard 1 card, then target up to 2 Spells/Traps on the field; destroy them.",
+                "race": "Quick-Play",
+                "imageUrl": "https://ygoprodeck.com/pics/43898403.jpg"
+            },
+            {
+                "id": 3,
+                "cardId": 65681983,
+                "name": "Crossout Designator",
+                "type": "Spell Card",
+                "desc": "Declare 1 card name; banish 1 of that declared card from your Main Deck, and if you do, negate its effects, as well as the activated effects and effects on the field of cards with the same original name, until the end of this turn. You can only activate 1 \"Crossout Designator\" per turn.",
+                "race": "Quick-Play",
+                "imageUrl": "https://ygoprodeck.com/pics/65681983.jpg"
+            },
+            {
+                "id": 4,
+                "cardId": 65681983,
+                "name": "Crossout Designator",
+                "type": "Spell Card",
+                "desc": "Declare 1 card name; banish 1 of that declared card from your Main Deck, and if you do, negate its effects, as well as the activated effects and effects on the field of cards with the same original name, until the end of this turn. You can only activate 1 \"Crossout Designator\" per turn.",
+                "race": "Quick-Play",
+                "imageUrl": "https://ygoprodeck.com/pics/65681983.jpg"
+            },
+            {
+                "id": 5,
+                "cardId": 65681983,
+                "name": "Crossout Designator",
+                "type": "Spell Card",
+                "desc": "Declare 1 card name; banish 1 of that declared card from your Main Deck, and if you do, negate its effects, as well as the activated effects and effects on the field of cards with the same original name, until the end of this turn. You can only activate 1 \"Crossout Designator\" per turn.",
+                "race": "Quick-Play",
+                "imageUrl": "https://ygoprodeck.com/pics/65681983.jpg"
+            },
+            {
+                "id": 6,
+                "cardId": 15693423,
+                "name": "Evenly Matched",
+                "type": "Trap Card",
+                "desc": "At the end of the Battle Phase, if your opponent controls more cards than you do: You can make your opponent banish cards from their field face-down so they control the same number of cards as you do. If you control no cards, you can activate this card from your hand.",
+                "race": "Normal",
+                "imageUrl": "https://ygoprodeck.com/pics/15693423.jpg"
+            },
+            {
+                "id": 7,
+                "cardId": 15693423,
+                "name": "Evenly Matched",
+                "type": "Trap Card",
+                "desc": "At the end of the Battle Phase, if your opponent controls more cards than you do: You can make your opponent banish cards from their field face-down so they control the same number of cards as you do. If you control no cards, you can activate this card from your hand.",
+                "race": "Normal",
+                "imageUrl": "https://ygoprodeck.com/pics/15693423.jpg"
+            },
+            {
+                "id": 8,
+                "cardId": 15693423,
+                "name": "Evenly Matched",
+                "type": "Trap Card",
+                "desc": "At the end of the Battle Phase, if your opponent controls more cards than you do: You can make your opponent banish cards from their field face-down so they control the same number of cards as you do. If you control no cards, you can activate this card from your hand.",
+                "race": "Normal",
+                "imageUrl": "https://ygoprodeck.com/pics/15693423.jpg"
+            },
+            {
+                "id": 9,
+                "cardId": 58921041,
+                "name": "Anti-Spell Fragrance",
+                "type": "Trap Card",
+                "desc": "Both players must Set Spell Cards before activating them, and cannot activate them until their next turn after Setting them.",
+                "race": "Continuous",
+                "imageUrl": "https://ygoprodeck.com/pics/58921041.jpg"
+            },
+            {
+                "id": 10,
+                "cardId": 58921041,
+                "name": "Anti-Spell Fragrance",
+                "type": "Trap Card",
+                "desc": "Both players must Set Spell Cards before activating them, and cannot activate them until their next turn after Setting them.",
+                "race": "Continuous",
+                "imageUrl": "https://ygoprodeck.com/pics/58921041.jpg"
+            },
+            {
+                "id": 11,
+                "cardId": 58921041,
+                "name": "Anti-Spell Fragrance",
+                "type": "Trap Card",
+                "desc": "Both players must Set Spell Cards before activating them, and cannot activate them until their next turn after Setting them.",
+                "race": "Continuous",
+                "imageUrl": "https://ygoprodeck.com/pics/58921041.jpg"
+            },
+            {
+                "id": 12,
+                "cardId": 90846359,
+                "name": "Rivalry of Warlords",
+                "type": "Trap Card",
+                "desc": "Each player can only control 1 Type of monster. Send all other face-up monsters they control to the GY.",
+                "race": "Continuous",
+                "imageUrl": "https://ygoprodeck.com/pics/90846359.jpg"
+            },
+            {
+                "id": 13,
+                "cardId": 90846359,
+                "name": "Rivalry of Warlords",
+                "type": "Trap Card",
+                "desc": "Each player can only control 1 Type of monster. Send all other face-up monsters they control to the GY.",
+                "race": "Continuous",
+                "imageUrl": "https://ygoprodeck.com/pics/90846359.jpg"
+            },
+            {
+                "id": 14,
+                "cardId": 90846359,
+                "name": "Rivalry of Warlords",
+                "type": "Trap Card",
+                "desc": "Each player can only control 1 Type of monster. Send all other face-up monsters they control to the GY.",
+                "race": "Continuous",
+                "imageUrl": "https://ygoprodeck.com/pics/90846359.jpg"
+            },
+            {
+                "id": 15,
+                "cardId": 23002292,
+                "name": "Red Reboot",
+                "type": "Trap Card",
+                "desc": "When your opponent activates a Trap Card: Negate the activation, and if you do, Set that card face-down, then they can Set 1 other Trap directly from their Deck. For the rest of this turn after this card resolves, your opponent cannot activate Trap Cards. You can activate this card from your hand by paying half your LP.",
+                "race": "Counter",
+                "imageUrl": "https://ygoprodeck.com/pics/23002292.jpg"
+            }
         ]
     }
 }
