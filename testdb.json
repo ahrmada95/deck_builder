@@ -636,7 +636,46 @@
                 "race": "Wyrm",
                 "attribute": "LIGHT",
                 "imageUrl": "https://ygoprodeck.com/pics/19048328.jpg"
-            }       
+            },
+            {
+                "id": 13,
+                "cardId": 47710198,
+                "name": "Swordsoul Sinister Sovereign - Qixing Longyuan",
+                "type": "Synchro Monster",
+                "desc": "1 Tuner + 1+ non-Tuner Wyrm monsters\r\nIf you Synchro Summon another Wyrm Synchro Monster: You can draw 1 card. If your opponent Special Summons a monster(s) (except during the Damage Step): You can banish 1 of them, and if you do, inflict 1200 damage to your opponent. When your opponent activates a Spell/Trap Card or effect (Quick Effect): You can banish that card, and if you do, inflict 1200 damage to your opponent. You can only use each effect of \"Swordsoul Sinister Sovereign - Qixing Longyuan\" once per turn.",
+                "atk": 2900,
+                "def": 2300,
+                "level": 10,
+                "race": "Wyrm",
+                "attribute": "FIRE",
+                "imageUrl": "https://ygoprodeck.com/pics/47710198.jpg"
+            },
+            {
+                "id": 14,
+                "cardId": 84815190,
+                "name": "Baronne de Fleur",
+                "type": "Synchro Monster",
+                "desc": "1 Tuner + 1+ non-Tuner monsters\r\nOnce per turn: You can target 1 card on the field; destroy it. Once while face-up on the field, when a card or effect is activated (Quick Effect): You can negate the activation, and if you do, destroy that card. You can only use the previous effect of \"Baronne de Fleur\" once per turn. Once per turn, during the Standby Phase: You can target 1 Level 9 or lower monster in your GY; return this card to the Extra Deck, and if you do, Special Summon that monster.",
+                "atk": 3000,
+                "def": 2400,
+                "level": 10,
+                "race": "Warrior",
+                "attribute": "WIND",
+                "imageUrl": "https://ygoprodeck.com/pics/84815190.jpg"
+            },
+            {
+                "id": 15,
+                "cardId": 96633955,
+                "name": "Swordsoul Supreme Sovereign - Chengying",
+                "type": "Synchro Monster",
+                "desc": "1 Tuner + 1+ non-Tuner monsters\r\nFor each banished card, this card gains 100 ATK/DEF and monsters your opponent controls lose 100 ATK/DEF. If this card would be destroyed by card effect, you can banish 1 card from your GY instead. If a card(s) is banished (except during the Damage Step): You can banish 1 card each from both your opponent's field and GY. You can only use this effect of \"Swordsoul Supreme Sovereign - Chengying\" once per turn.",
+                "atk": 3000,
+                "def": 3000,
+                "level": 10,
+                "race": "Wyrm",
+                "attribute": "WATER",
+                "imageUrl": "https://ygoprodeck.com/pics/96633955.jpg"
+            }         
         ],
         "sideDeck": [
     
