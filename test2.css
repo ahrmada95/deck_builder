@@ -40,8 +40,8 @@ body {
 
 .application {
     background-color: rgb(201, 169, 121);
-    width: 100%; /*full width of window*/
-    height: 93.5vh; /*Remaining 94% of view window height*/
+    width: 100vw; /*full width of window*/
+    height: 94vh; /*Remaining 94% of view window height*/
     display: flex; /*make flexbox, goated shit*/
     flex-direction: row; /*children will be in a row*/
     justify-content: flex-start; /*children within will start from left*/
@@ -49,7 +49,7 @@ body {
 
 .application > .deck-builder {
     background-color: darkkhaki;
-    height: 100%; /*100% of application window*/
+    height: auto; /*100% of application window*/
     display: flex; /*make flexbox, goated shit*/
     flex-direction: column;
     padding: 0.25vh;
@@ -58,8 +58,8 @@ body {
 
 .deck-builder > .main-deck {
     background-color: darkorange;
-    width: 100%; /*100% of deckbuilder window*/
-    height: 35vw;
+    width: 100%;
+    height: 63vh;
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -113,7 +113,7 @@ body {
 .deck-builder > .extra-deck {
     background-color: darkorange;
     width: 100%; /*100% of deckbuilder window*/
-    height: 8vw;
+    height: 15vh;
     margin-top: 0.25vh;
     align-self: center;
     display: flex;
@@ -167,7 +167,7 @@ body {
 .deck-builder > .side-deck {
     background-color: darkorange;
     width: 100%; /*100% of deckbuilder window*/
-    height: 8vw;
+    height: 15vh;
     margin-top: 0.25vh;
     align-self: center;
     display: flex;
@@ -221,7 +221,7 @@ body {
 .application > .card-applications {
     background-color: black;
     flex-grow: 3;
-    height: 100%;
+    height: auto;
     display: flex;
     padding: 0.25vh;
     flex-direction: column;
