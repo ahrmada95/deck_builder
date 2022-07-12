@@ -1,8 +1,12 @@
-// //get urls for Yu-Gi-Oh! Prodeck API
-// const baseUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?';
-// const urlCardName = `${baseUrl}name=`;
-// const urlCardId = `${baseUrl}id=`;
-// const baseUrlImg = 'https://ygoprodeck.com/pics/'; 
+//get urls for Yu-Gi-Oh! Prodeck API
+const baseUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?';
+const urlCardName = `${baseUrl}name=`;
+const urlCardId = `${baseUrl}id=`;
+const baseUrlImg = 'https://ygoprodeck.com/pics/';
+
+//grab elements
+const cardViewImg = document.querySelector('#selected-card-img');
+
 
 // const cardViewer = document.querySelector('#card-viewer-img');
 // const cardViewerName = document.querySelector("#card-viewer > h1");
