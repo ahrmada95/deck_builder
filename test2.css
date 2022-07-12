@@ -40,8 +40,8 @@ body {
 
 .application {
     background-color: rgb(201, 169, 121);
-    width: 100vw; /*full width of window*/
-    height: 94vh; /*Remaining 94% of view window height*/
+    width: 100%; /*full width of window*/
+    height: 93.5vh; /*Remaining 94% of view window height*/
     display: flex; /*make flexbox, goated shit*/
     flex-direction: row; /*children will be in a row*/
     justify-content: flex-start; /*children within will start from left*/
@@ -49,17 +49,17 @@ body {
 
 .application > .deck-builder {
     background-color: darkkhaki;
-    width: 60vw; /*55% window*/
     height: 100%; /*100% of application window*/
     display: flex; /*make flexbox, goated shit*/
     flex-direction: column;
+    padding: 0.25vh;
+    flex-grow: 4;
 }
 
 .deck-builder > .main-deck {
     background-color: darkorange;
-    width: 99%; /*100% of deckbuilder window*/
+    width: 100%; /*100% of deckbuilder window*/
     height: 35vw;
-    margin-top: 0.5%;
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -112,9 +112,9 @@ body {
 
 .deck-builder > .extra-deck {
     background-color: darkorange;
-    width: 99%; /*100% of deckbuilder window*/
+    width: 100%; /*100% of deckbuilder window*/
     height: 8vw;
-    margin-top: 0.5%;
+    margin-top: 0.25vh;
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -166,9 +166,9 @@ body {
 
 .deck-builder > .side-deck {
     background-color: darkorange;
-    width: 99%; /*100% of deckbuilder window*/
+    width: 100%; /*100% of deckbuilder window*/
     height: 8vw;
-    margin-top: 0.5%;
+    margin-top: 0.25vh;
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -220,26 +220,26 @@ body {
 
 .application > .card-applications {
     background-color: black;
-    width: 40vw;
+    flex-grow: 3;
     height: 100%;
     display: flex;
+    padding: 0.25vh;
     flex-direction: column;
 }
 
 .card-applications > .card-viewer {
     background-color: gray;
-    width: 98.4%;
+    width: 100%;
     height: 25vw;
-    margin-top: 0.8%;
     align-self: center;
     display: flex;
 }
 
 .card-applications > .card-searcher {
     background-color: gray;
-    width: 98.4%;
-    height: 27vw;
-    margin-top: 0.8%;
+    width: 100%;
+    height: 28.5vw;
+    margin-top: 0.25vh;
     align-self: center;
     display: flex;
 }
