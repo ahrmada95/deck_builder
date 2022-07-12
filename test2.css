@@ -96,7 +96,7 @@ body {
 
 .main-deck > .main-deck-builder {
     background-color: darkred;
-    width: 100%;
+    width: auto;
     height: 33.5vw;
     display: grid;
     padding: 0.25vh;
@@ -151,7 +151,7 @@ body {
 
 .extra-deck > .extra-deck-builder {
     background-color: darkblue;
-    width: 100%;
+    width: auto;
     height: 6.5vw;
     display: grid;
     padding: 0.25vh;
@@ -205,7 +205,7 @@ body {
 
 .side-deck > .side-deck-builder {
     background-color: darkgreen;
-    width: 100%;
+    width: auto;
     height: 6.5vw;
     display: grid;
     padding: 0.25vh;
