@@ -41,6 +41,7 @@ body {
 
 .deck-builder-img:hover {
     filter:brightness(150%);
+    cursor: pointer;
 }
 
 .extra-deck-img {
@@ -67,7 +68,7 @@ body {
 #card-viewer-img {
     display: flex;
     margin: auto;
-    width: 300px;
+    width: 200px;
 }
 
 @font-face {
@@ -99,6 +100,7 @@ body {
 
 .card-stats-text {
     font-family: stats-text;
+    font-size: 20px;
     display: flex;
 }
 

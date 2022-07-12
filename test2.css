@@ -1,0 +1,24 @@
+body {
+    background-color: white;
+    margin: 0;
+    width: 100vw; /*full view window*/
+    height: 100vh; /*full view window*/
+}
+
+.banner {
+    background-color: antiquewhite;
+    width: 100vw; /*full width of window*/
+    height: 6vh; /*6% of view window height*/
+    display: flex; /*make flexbox, goated shit*/
+    flex-direction: row; /*children will be in a row*/
+    justify-content: space-between; /*evenly size children within*/
+}
+
+.application {
+    background-color: rgb(201, 169, 121);
+    width: 100vw; /*full width of window*/
+    height: 94vh; /*Remaining 94% of view window height*/
+    display: flex; /*make flexbox, goated shit*/
+    flex-direction: row; /*children will be in a row*/
+    justify-content: flex-start; /*children within will start from left*/
+}
