@@ -6,6 +6,32 @@ const baseUrlImg = 'https://ygoprodeck.com/pics/';
 
 //grab elements
 const cardViewImg = document.querySelector('#selected-card-img');
+const cardViewName = document.querySelector('#select-card-name');
+const cardViewAttributes = document.querySelector('#select-card-attributes');
+const cardStats = document.querySelector('#select-card-stats');
+const cardEffects = document.querySelector('#select-card-effects');
+
+
+//fetch request to search by card's name
+const fetchByName = async (cardName) => {
+    //request from api
+    let req = await fetch(`${urlCardName}${cardName}`);
+    //get response back as json
+    let res = await req.json();
+    //return response, JUST THE CARD INFORMATION
+    return res['data']['0'];
+}
+
+//fetch request to search by card's ID
+const fetchByID = async (cardId) => {
+    //request from api
+    let req = await fetch(`${urlCardId}${cardId}`);
+    //get response back as json
+    let res = await req.json();
+    //return response, JUST THE CARD INFORMATION
+    return res['data']['0'];
+}
+const 
 
 
 // const cardViewer = document.querySelector('#card-viewer-img');
@@ -15,27 +41,6 @@ const cardViewImg = document.querySelector('#selected-card-img');
 // const cardViewerAtk = document.querySelector("#card-viewer > span > p:nth-child(1)");
 // const cardViewerDef = document.querySelector("#card-viewer > span > p:nth-child(2)");
 
-
-
-// //fetch request to search by card's name
-// const fetchByName = async (cardName) => {
-//     //request from api
-//     let req = await fetch(`${urlCardName}${cardName}`);
-//     //get response back as json
-//     let res = await req.json();
-//     //return response, JUST THE CARD INFORMATION
-//     return res['data']['0'];
-// }
-
-// //fetch request to search by card's ID
-// const fetchByID = async (cardId) => {
-//     //request from api
-//     let req = await fetch(`${urlCardId}${cardId}`);
-//     //get response back as json
-//     let res = await req.json();
-//     //return response, JUST THE CARD INFORMATION
-//     return res['data']['0'];
-// }
 
 // const testCardView = async (cardNameorId) => {
 //     let cardTitle = document.createElement('h1');

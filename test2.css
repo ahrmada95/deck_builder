@@ -315,24 +315,37 @@ body {
     flex-direction: column;
     justify-content: center;
     vertical-align: top;
-    overflow: auto;
+    
 }
 
 #selected-card-details > #select-card-name {
     font-family: title-text;
-    font-size: 20;
+    position: relative;
+    flex: 1 0 0;
+    font-size: 3vh;
 }
 
 #selected-card-details > #select-card-attributes {
     font-family: properties-text;
+    position: relative;
+    font-size: 1.30vh;
+    flex: 1 0 0;
+    margin-bottom: 0.5vh;
 }
 
 #selected-card-details > #select-card-stats {
     font-family: stats-text;
+    position: relative;
+    font-size: 2vh;
+    flex: 1 0 0;
+    margin-bottom: 0.5vh;
 }
 
 #selected-card-details > #select-card-effects {
     font-family: effect-text;
+    font-size: 1.4vh;
+    flex: 20 0 0;
+    overflow: auto;
 }
 
 .card-applications > .card-searcher {
