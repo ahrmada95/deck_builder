@@ -1,3 +1,21 @@
+@font-face {
+    font-family: title-`t;
+    src: url("./assets/fonts/Yu-Gi-Oh! Matrix Regular Small Caps 1.ttf");
+}
+@font-face {
+    font-family: effect-text;
+    src: url("./assets/fonts/Yu-Gi-Oh!\ Matrix\ Book.ttf");
+}
+@font-face {
+    font-family: stats-text;
+    src: url("./assets/fonts/Yu-Gi-Oh!\ Matrix\ Regular\ Small\ Caps\ 2.ttf");
+}
+
+@font-face {
+    font-family: properties-text;
+    src: url("./assets/fonts/Yu-Gi-Oh!\ ITC\ Stone\ Serif\ Small\ Caps\ Bold.ttf");
+}
+
 body {
     background-color: white;
     margin: 0;
@@ -53,7 +71,7 @@ body {
     display: flex; /*make flexbox, goated shit*/
     flex-direction: column;
     padding: 0.25vh;
-    flex-grow: 4;
+    flex: 4 0 0; /*to stop other shit from growing, we gotta stop everything from shrinking*/
 }
 
 .deck-builder > .main-deck {
@@ -220,7 +238,7 @@ body {
 
 .application > .card-applications {
     background-color: black;
-    flex-grow: 3;
+    flex: 3 0 0;
     height: auto;
     display: flex;
     padding: 0.25vh;
@@ -233,7 +251,26 @@ body {
     height: 25vw;
     align-self: center;
     display: flex;
+    flex-direction: row;
 }
+
+.card-viewer > #selected-card {
+    background-color: aliceblue;
+    height: 100%;
+    display: flex;
+    flex: 2 0 0;
+}
+
+.card-viewer > #selected-card-details {
+    background-color: rgb(101, 115, 128);
+    height: 100%;
+    display: flex;
+    flex: 5 0 0;
+    justify-content: center;
+    vertical-align: top;
+    overflow: auto;
+}
+
 
 .card-applications > .card-searcher {
     background-color: gray;
@@ -242,6 +279,26 @@ body {
     margin-top: 0.25vh;
     align-self: center;
     display: flex;
+    flex-direction: column;
+}
+
+.card-searcher > #card-search-banner {
+    background-color: aquamarine;
+    flex-grow: 1;
+}
+
+.card-searcher > #card-search-results {
+    background-color: rgb(127, 171, 209);
+    flex-grow: 10;
+    display: grid;
+    grid-template-columns: repeat(2,1fr); /*you will adjust these to scale with deck size*/
+    grid-template-rows: repeat(4,1fr); /*you will adjust these to scale with deck size*/
+    column-gap: 0.25vh;
+    row-gap: 0.25vh;
+}
+
+#card-search-spot {
+    background-color: blueviolet;
 }
 
 
