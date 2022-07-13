@@ -1,6 +1,7 @@
 {
     "decks": {
-        "testDeck": {
+        
+            "testDeck": {
             "mainDeck": [
                 {
                     "id": 1,
@@ -830,8 +831,9 @@
                     "imageUrl": "https://ygoprodeck.com/pics/23002292.jpg"
                 }
             ]
-        },
-        "testDeck2": {
+            },
+        
+            "testDeck2": {
             "mainDeck": [
                 {
                     "id": 1,
@@ -1019,6 +1021,7 @@
                     "imageUrl": "https://ygoprodeck.com/pics/32519092.jpg"
                 }
             ]
-        }
+            }
+        
     }
 }

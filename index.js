@@ -17,11 +17,11 @@ class Card {
 }
 
 //global variables
-const currDeck = "testDeck"; //name of current deck
-const mainDeck = []; //empty array to hold main deck
-const extraDeck = []; //empty array to hold extra deck
-const sideDeck = []; //empty array to hold side deck
-const listDecks = []; //empty array to hold the list of deck names from db, will use to fill form options
+let currDeck = ''; //name of current deck
+let mainDeck = []; //empty array to hold main deck
+let extraDeck = []; //empty array to hold extra deck
+let sideDeck = []; //empty array to hold side deck
+let listDecks = []; //empty array to hold the list of deck names from db, will use to fill form options
 
 //get urls for Yu-Gi-Oh! Prodeck API
 const apiBaseUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?';
@@ -57,17 +57,39 @@ const fetchById = async (cardId) => {
     return res['data']['0'];
 }
 
-//DB CALL: fetch list of deck names
+//DB CALL: fetch list of deck na`mes
 const fetchListDecks = async () => {
     let req = await fetch('http://localhost:3000/decks');
     let res = await req.json();
-    return res;
+    return Object.keys(res);
 }
 
+//DB CALLL: fetch deck information 
+const fetchDeck = async (deckName) => {
+    let req = await fetch(`http://localhost:3000/decks/`);
+    let res = await req.json();
+    return res[`${deckName}`];
+}
+
+//initalize deck name to first from db
+const initalizeDeck = async () => {
+    const arrayOfNames = await fetchListDecks()
+    currDeck = arrayOfNames[0];
+}
+
+//fill up deck arrays
+const populateDecks = async (foo) => {
+    await foo();
+    let deckList = await fetchDeck(currDeck);
+    mainDeck = deckList.mainDeck; 
+    extraDeck = deckList.extraDeck; 
+    sideDeck = deckList.sideDeck;
+    console.log(deckList);
+}
 
 //render main deck
 const renderMainDeck = () => {
-
+    console.log(currDeck);
 }
 
 //render extra deck
@@ -81,6 +103,7 @@ const renderSideDeck = () => {
 }
 //render deck application portion
 const renderDeck = async (deckName) => {
+    await 
     renderMainDeck();
     renderExtraDeck();
     renderSideDeck();
@@ -106,13 +129,8 @@ const testCardView = async(cardNameOrId) => {
 }
 
 testCardView(80896940);
+populateDecks(initalizeDeck);
 
-const testDeckList = async () => {
-    let testArray = await fetchListDecks();
-    console.log(Object.keys(testArray));
-}
-
-testDeckList();
 // const newCardId = 99999999; 
 // const newName = 'Test Monster'; //card name
 // const newType = 'Monster'; //type of card
