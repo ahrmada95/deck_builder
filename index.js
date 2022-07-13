@@ -1,8 +1,34 @@
+//global class
+//Card class declaration and constructor
+class Card {
+    cardId; //card id - 8 digit int
+    name; //card name
+    type; //type of card
+    desc; //description of card or card effect
+    atk = undefined; //attack point statline, NOTE that spells, traps do not have this stat
+    def = undefined; //defense point statline, NOTE that spells, traps, links, do not have stat
+    level = undefined; // card level (when applicable), NOTE that spells, traps, links, and XYZ do not have levels
+    race; //race of card, for spell/trap this describes the type of spell/trap they are 
+    attribute = undefined; //attribute, does not apply to spell/trap
+    imageUrl;// image url to grab from site, NOT FROM GOOGLE SERVER, else blacklist
+    constructor(cardId, name, type, desc, atk, def, level, race, attribute, imageUrl) {
+        this.cardId = cardId; this.name = name; this.type = type; this.desc = desc; this.atk = atk; this.def = def; this.level = level; this.race = race; this.attribute = attribute; this.imageUrl = imageUrl;
+    }
+}
+
+//global variables
+const currDeck = "testDeck"; //name of current deck
+const mainDeck = []; //empty array to hold main deck
+const extraDeck = []; //empty array to hold extra deck
+const sideDeck = []; //empty array to hold side deck
+const listDecks = []; //empty array to hold the list of deck names from db, will use to fill form options
+
 //get urls for Yu-Gi-Oh! Prodeck API
-const baseUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?';
-const urlCardName = `${baseUrl}name=`;
-const urlCardId = `${baseUrl}id=`;
+const apiBaseUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?';
+const urlCardName = `${apiBaseUrl}name=`;
+const urlCardId = `${apiBaseUrl}id=`;
 const baseUrlImg = 'https://ygoprodeck.com/pics/';
+const deckUrl = `http://localhost:3000/${currDeck}`;
 
 //grab elements
 const cardViewImg = document.querySelector('#selected-card-img');
@@ -11,8 +37,7 @@ const cardViewAttributes = document.querySelector('#select-card-attributes');
 const cardStats = document.querySelector('#select-card-stats');
 const cardEffects = document.querySelector('#select-card-effects');
 
-
-//fetch request to search by card's name
+//API CALL: fetch request to search by card's name
 const fetchByName = async (cardName) => {
     //request from api
     let req = await fetch(`${urlCardName}${cardName}`);
@@ -22,8 +47,8 @@ const fetchByName = async (cardName) => {
     return res['data']['0'];
 }
 
-//fetch request to search by card's ID
-const fetchByID = async (cardId) => {
+//API CALL: fetch request to search by card's ID
+const fetchById = async (cardId) => {
     //request from api
     let req = await fetch(`${urlCardId}${cardId}`);
     //get response back as json
@@ -31,8 +56,77 @@ const fetchByID = async (cardId) => {
     //return response, JUST THE CARD INFORMATION
     return res['data']['0'];
 }
-const 
 
+//DB CALL: fetch list of deck names
+const fetchListDecks = async () => {
+    let req = await fetch('http://localhost:3000/decks');
+    let res = await req.json();
+    return res;
+}
+
+
+//render main deck
+const renderMainDeck = () => {
+
+}
+
+//render extra deck
+const renderExtraDeck = () => {
+
+}
+
+//render side deck 
+const renderSideDeck = () => {
+
+}
+//render deck application portion
+const renderDeck = async (deckName) => {
+    renderMainDeck();
+    renderExtraDeck();
+    renderSideDeck();
+}
+
+const testCardView = async(cardNameOrId) => {
+    //undefined var
+    let cardSearched; 
+    //check to see if it is a number or not
+    if(isNaN(cardNameOrId)){
+        //not a number -> fetch by Name
+        cardSearched = await fetchByName(cardNameOrId);
+    } else {
+        //is a number -> fetch by ID
+        cardSearched = await fetchById(cardNameOrId);
+    }
+
+    cardViewImg.src = `https://ygoprodeck.com/pics/${cardSearched['id']}.jpg`;
+    cardViewName.textContent = cardSearched['name'];
+    cardViewAttributes.textContent = `${cardSearched['race']}/${cardSearched['type']}`;
+    cardStats.textContent = `ATK/${cardSearched['atk']}`
+    cardEffects.textContent = cardSearched['desc']
+}
+
+testCardView(80896940);
+
+const testDeckList = async () => {
+    let testArray = await fetchListDecks();
+    console.log(Object.keys(testArray));
+}
+
+testDeckList();
+// const newCardId = 99999999; 
+// const newName = 'Test Monster'; //card name
+// const newType = 'Monster'; //type of card
+// const newDesc = 'Testing constructor.'; //description of card or card effect
+// const newAtk = 2000; //attack point statline, NOTE that spells, traps do not have this stat
+// const newDef = 2000; //defense point statline, NOTE that spells, traps, links, do not have stat
+// const newLevel = 4; // card level (when applicable), NOTE that spells, traps, links, and XYZ do not have levels
+// const newRace = 'Warrior'; //race of card, for spell/trap this describes the type of spell/trap they are 
+// const newAttribute = 'Dark'; //attribute, does not apply to spell/trap
+// const newImageUrl = 'google.com';// image url to g
+
+// const newCard = new Card(newCardId, newName, newType, newDesc, newAtk, newDef, newLevel, newRace, newAttribute, newImageUrl);
+
+// console.log(newCard);
 
 // const cardViewer = document.querySelector('#card-viewer-img');
 // const cardViewerName = document.querySelector("#card-viewer > h1");

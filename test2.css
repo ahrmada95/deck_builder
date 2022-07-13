@@ -181,10 +181,23 @@ body {
     height: 33.5vw;
     display: grid;
     padding: 0.25vh;
-    grid-template-columns: repeat(10,1fr); /*you will adjust these to scale with deck size*/
-    grid-template-rows: repeat(4,1fr); /*you will adjust these to scale with deck size*/
     column-gap: 0.25vh;
     row-gap: 0.25vh;
+}
+
+.deck-ct-40{
+    grid-template-columns: repeat(10,1fr); /*you will adjust these to scale with deck size*/
+    grid-template-rows: repeat(4,1fr); /*you will adjust these to scale with deck size*/
+}
+
+.deck-ct-50 {
+    grid-template-columns: repeat(10,1fr); /*you will adjust these to scale with deck size*/
+    grid-template-rows: repeat(5,1fr); /*you will adjust these to scale with deck size*/
+}
+
+.deck-ct-60 {
+    grid-template-columns: repeat(15,1fr); /*you will adjust these to scale with deck size*/
+    grid-template-rows: repeat(4,1fr); /*you will adjust these to scale with deck size*/
 }
 
 .main-deck-builder > .main-deck-spot {
