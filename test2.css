@@ -41,6 +41,10 @@
     text-align: center;
  }
 
+ .builder-img {
+    width: 100%; 
+ }
+
 body {
     background-color: white;
     margin: 0;
