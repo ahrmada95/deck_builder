@@ -195,7 +195,12 @@ body {
     padding: 0.25vh;
     column-gap: 0.25vh;
     row-gap: 0.25vh;
+    overflow: auto;
 }
+
+.main-deck-builder::-webkit-scrollbar {
+    display: none;
+  }  
 
 .deck-ct-40{
     grid-template-columns: repeat(10,1fr); /*you will adjust these to scale with deck size*/
@@ -363,7 +368,6 @@ body {
     flex-direction: column;
     justify-content: center;
     vertical-align: top;
-    
 }
 
 #selected-card-details > #select-card-name {
@@ -395,6 +399,10 @@ body {
     flex: 20 0 0;
     overflow: auto;
 }
+
+#select-card-effects::-webkit-scrollbar {
+    display: none;
+  }  
 
 .card-applications > .card-searcher {
     width: 100%;
