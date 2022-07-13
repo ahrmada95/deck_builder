@@ -455,6 +455,8 @@ body {
 
 #card-name {
     font-family: effect-text;
+    font-size: 1.75vh;
+    width: 55%;
 }
 
 .search-button {

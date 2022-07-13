@@ -144,7 +144,7 @@ const renderExtraDeck = () => {
     extraDeckBuilder.innerHTML = '';
     extraDeck.forEach(something => {
         let tempCard = document.createElement('img');
-        tempCard.addEventListener('contextmenu',(e) => {
+        tempCard.addEventListener('contextmenu',(e) => {    
             e.preventDefault()
             extraDeck.splice(extraDeck.indexOf(something), 1)
             tempCard.remove()
