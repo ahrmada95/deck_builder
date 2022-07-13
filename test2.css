@@ -20,6 +20,27 @@
     font-family: title-text;
 }
 
+.button {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color: #FFFFFF;
+    font-family: effect-text;
+    font-size: 40px;
+    font-weight: 100;
+    padding: 40px;
+    background-color: #6284AB;
+    -webkit-box-shadow: 1px 1px 20px 0 #000000;
+    -moz-box-shadow: 1px 1px 20px 0 #000000;
+    box-shadow: 1px 1px 20px 0 #000000;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #FFFFFF 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+ }
+
 body {
     background-color: white;
     margin: 0;
