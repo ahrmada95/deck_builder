@@ -45,6 +45,14 @@
     width: 100%; 
  }
 
+ .builder-img:hover {
+    filter: brightness(1.4) contrast(1.4); 
+ }
+
+.builder-img-selected {
+    filter: hue-rotate(100deg) saturate(0.6);
+}
+
 body {
     background-color: white;
     margin: 0;
@@ -200,8 +208,8 @@ body {
 }
 
 .deck-ct-60 {
-    grid-template-columns: repeat(15,1fr); /*you will adjust these to scale with deck size*/
-    grid-template-rows: repeat(4,1fr); /*you will adjust these to scale with deck size*/
+    grid-template-columns: repeat(10,1fr); /*you will adjust these to scale with deck size*/
+    grid-template-rows: repeat(6,1fr); /*you will adjust these to scale with deck size*/
 }
 
 .main-deck-builder > .main-deck-spot {

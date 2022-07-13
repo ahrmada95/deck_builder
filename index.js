@@ -31,6 +31,9 @@ const baseUrlImg = 'https://ygoprodeck.com/pics/';
 const decksUrl = 'http://localhost:3000/decks';
 
 //grab elements
+const mainDeckBuilder = document.querySelector('.main-deck-builder');
+const extraDeckBuilder = document.querySelector('.extra-deck-builder');
+const sideDeckBuilder = document.querySelector('.side-deck-builder');
 const cardViewImg = document.querySelector('#selected-card-img');
 const cardViewName = document.querySelector('#select-card-name');
 const cardViewAttributes = document.querySelector('#select-card-attributes');
@@ -58,7 +61,7 @@ const fetchById = async (cardId) => {
     return res['data']['0'];
 }
 
-//DB CALL: fetch list of deck na`mes
+//DB CALL: fetch list of deck names
 const fetchListDecks = async () => {
     let req = await fetch(decksUrl);
     let res = await req.json();
@@ -85,22 +88,59 @@ const populateDecks = async (foo) => {
     mainDeck = deckList.mainDeck; 
     extraDeck = deckList.extraDeck; 
     sideDeck = deckList.sideDeck;
-    console.log(deckList);
+    console.log(currDeck);
+    renderMainDeck();
+    renderExtraDeck();
+    renderSideDeck();
 }
 
 //render main deck
 const renderMainDeck = () => {
-    console.log(currDeck);
+    console.log(mainDeck);
+    //clear out builder
+    mainDeckBuilder.innerHTML = '';
+    if(mainDeck.length > 40 && mainDeck.length <= 50) {
+        mainDeckBuilder.classList.remove('deck-ct-40');
+        mainDeckBuilder.classList.add('deck-ct-50');
+    } else if (mainDeck.length > 40 && mainDeck.length <= 60){
+        mainDeckBuilder.classList.remove('deck-ct-40');
+        mainDeckBuilder.classList.add('deck-ct-60');
+    } else {
+        mainDeckBuilder.classList.remove('deck-ct-50');
+        mainDeckBuilder.classList.remove('deck-ct-60');
+        mainDeckBuilder.classList.add('deck-ct-40');
+    }
+
+    //iterate througha array and append
+    mainDeck.forEach(something => {
+        let tempCard = document.createElement('img');
+        tempCard.classList.add('builder-img');
+        tempCard.src = something['imageUrl'];
+        mainDeckBuilder.append(tempCard);
+    })
 }
 
 //render extra deck
 const renderExtraDeck = () => {
-    console.log(currDeck);
+    //iterate througha array and appen
+    extraDeckBuilder.innerHTML = '';
+    extraDeck.forEach(something => {
+        let tempCard = document.createElement('img');
+        tempCard.classList.add('builder-img');
+        tempCard.src = something['imageUrl'];
+        extraDeckBuilder.append(tempCard);
+    })
 }
 
 //render side deck 
 const renderSideDeck = () => {
-    console.log(currDeck);
+    sideDeckBuilder.innerHTML = '';
+    sideDeck.forEach(something => {
+        let tempCard = document.createElement('img');
+        tempCard.classList.add('builder-img');
+        tempCard.src = something['imageUrl'];
+        sideDeckBuilder.append(tempCard);
+    })
 }
 //render deck application portion
 const renderDeck = () => {
@@ -130,7 +170,7 @@ const testCardView = async(cardNameOrId) => {
 
 deckForm.addEventListener('change', () => {
     currDeck = deckForm[0].value;
-    renderDeck();
+    populateDecks(() => {});
 })
 
 const updateDeckSelector = async () => {
@@ -151,8 +191,8 @@ const updateDeckSelector = async () => {
     })
 }
 
-updateDeckSelector()
-
-testCardView(80896940);
 populateDecks(initalizeDeck);
+
+
+// testCardView(80896940);
 
