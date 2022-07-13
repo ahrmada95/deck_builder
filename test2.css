@@ -185,9 +185,6 @@ body {
     height: 1.5vw;
     display: flex;
     flex-direction: row;
-    /* border-style: solid;
-    border-color: black;
-    border-width: 5px; */
 }
 
 .extra-deck-banner > .extra-deck-tag{
@@ -377,7 +374,7 @@ body {
 }
 
 #card-search-spot {
-    background-color: rgba(138, 43, 226, 0.25);
+    background-color: rgba(138, 43, 226, 0.1);
 
 }
 
