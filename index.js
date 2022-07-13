@@ -119,6 +119,19 @@ const renderMainDeck = () => {
             mainDeck.splice(mainDeck.indexOf(something), 1)
             tempCard.remove()
         })
+        tempCard.addEventListener('click', () => {
+            cardViewImg.src = tempCard.src
+            if (something.type === "Spell Card" || something.type === "Trap Card") {
+                cardStats.textContent = ''
+            } else if (something.type === "Link Monster") {
+                cardStats.textContent = `ATK/${something.atk}`
+            } else {
+                cardStats.textContent = `ATK/${something.atk} DEF/${something.def}`
+            }
+            cardViewName.textContent = something.name
+            cardViewAttributes.textContent = `[${something.race}/${something.type.split(' ')[0]}]`
+            cardEffects.textContent = something.desc
+        })
         tempCard.classList.add('builder-img');
         tempCard.src = something['imageUrl'];
         mainDeckBuilder.append(tempCard);
@@ -136,6 +149,19 @@ const renderExtraDeck = () => {
             extraDeck.splice(extraDeck.indexOf(something), 1)
             tempCard.remove()
         })
+        tempCard.addEventListener('click', () => {
+            cardViewImg.src = tempCard.src
+            if (something.type === "Spell Card" || something.type === "Trap Card") {
+                cardStats.textContent = ''
+            } else  if (something.type === "Link Monster") {
+                cardStats.textContent = `ATK/${something.atk}`
+            } else {
+                cardStats.textContent = `ATK/${something.atk} DEF/${something.def}`
+            }
+            cardViewName.textContent = something.name
+            cardViewAttributes.textContent = `[${something.race}/${something.type.split(' ')[0]}]`
+            cardEffects.textContent = something.desc
+        })
         tempCard.classList.add('builder-img');
         tempCard.src = something['imageUrl'];
         extraDeckBuilder.append(tempCard);
@@ -151,6 +177,19 @@ const renderSideDeck = () => {
             e.preventDefault()
             sideDeck.splice(sideDeck.indexOf(something), 1)
             tempCard.remove()
+        })
+        tempCard.addEventListener('click', () => {
+            cardViewImg.src = tempCard.src
+            if (something.type === "Spell Card" || something.type === "Trap Card") {
+                cardStats.textContent = ''
+            } else if (something.type === "Link Monster") {
+                cardStats.textContent = `ATK/${something.atk}`
+            } else {
+                cardStats.textContent = `ATK/${something.atk} DEF/${something.def}`
+            }
+            cardViewName.textContent = something.name
+            cardViewAttributes.textContent = `[${something.race}/${something.type.split(' ')[0]}]`
+            cardEffects.textContent = something.desc
         })
         tempCard.classList.add('builder-img');
         tempCard.src = something['imageUrl'];
