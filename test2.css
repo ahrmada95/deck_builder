@@ -28,7 +28,7 @@ body {
 }
 
 .banner {
-    background-color: antiquewhite;
+    background-color: rgb(49, 61, 77);
     width: 100vw; /*full width of window*/
     height: 6vh; /*6% of view window height*/
     display: flex; /*make flexbox, goated shit*/
@@ -37,7 +37,6 @@ body {
 }
 
 .banner > .deck-choice {
-    background-color: red;
     display: flex;
     height: 100%;
     flex: 1 0 0;
@@ -46,45 +45,60 @@ body {
     padding-left: 10px;
 }
 
+#deck-form {
+    font-family: effect-text;
+    font-size: 1.75vh;
+    color: white;
+}
+
+#decks {
+    font-family: effect-text;
+}
+
 .banner > .title {
-    background-color: blue;
     display: flex;
+    color: white;
     height: 100%;
     flex: 1 0 0;
+    font-size: 3vh;
     align-items:center;
     justify-content: center;
 }
 
 .banner > .deck-value {
-    background-color: green;
     display: flex;
     height: 100%;
     flex: 1 0 0;
     justify-content: flex-end;
     flex-direction: column;
     padding-right: 10px;
+    
 }
 
 .deck-value > #current-value {
-    background-color: rgb(11, 44, 11);
+    color: white;
     height: 50%;
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
     align-items:center;
+    font-family: stats-text;
+    font-size: 2.25vh;
 }
 
 .deck-value > #owned-value {
-    background-color: rgb(62, 143, 62);
+    color: white;
     height: 50%;
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
-    align-items:center;
+    align-items: center;
+    font-family: stats-text;
+    font-size: 2.25vh;
 }
 
 .application {
-    background-color: rgb(201, 169, 121);
+    background-color: rgb(17,57,78);
     width: 100vw; /*full width of window*/
     height: 94vh; /*Remaining 94% of view window height*/
     display: flex; /*make flexbox, goated shit*/
@@ -93,7 +107,7 @@ body {
 }
 
 .application > .deck-builder {
-    background-color: darkkhaki;
+    background-image: linear-gradient(to right, #01090e, #051219, #081922, #081f2c, #062537, #062537, #062537, #062537, #081f2c, #081922, #051219, #01090e);
     height: auto; /*100% of application window*/
     display: flex; /*make flexbox, goated shit*/
     flex-direction: column;
@@ -102,7 +116,6 @@ body {
 }
 
 .deck-builder > .main-deck {
-    background-color: darkorange;
     width: 100%;
     height: 63vh;
     align-self: center;
@@ -111,7 +124,7 @@ body {
 }
 
 .main-deck > .main-deck-banner {
-    background-color: gray;
+    background-color: rgb(49, 61, 77);
     width: 100%;
     height: 1.5vw;
     display: flex;
@@ -119,31 +132,30 @@ body {
 }
 
 .main-deck-banner > .main-deck-tag{
-    background-color: aqua;
     height: 100%;
     display: flex;
     flex-grow: 1;
     justify-content: flex-start;
     align-items: center;
     padding-left: 5px;
+    font-family: effect-text;
+    color: white;
+    font-size: 1.75vh;
 }
 
 .main-deck-banner > .main-deck-sort{
-    background-color: aquamarine;
     height: 100%;
     flex-grow: 1;
     justify-content: center;
 }
 
 .main-deck-banner > .main-deck-details {
-    background-color: azure;
     height: 100%;
     flex-grow: 1;
     justify-content: flex-end;
 }
 
 .main-deck > .main-deck-builder {
-    background-color: darkred;
     width: auto;
     height: 33.5vw;
     display: grid;
@@ -155,11 +167,10 @@ body {
 }
 
 .main-deck-builder > .main-deck-spot {
-    background-color: rgb(61, 5, 5);
+    background-color: rgba(61, 5, 5, 0.25);
 } 
 
 .deck-builder > .extra-deck {
-    background-color: darkorange;
     width: 100%; /*100% of deckbuilder window*/
     height: 15vh;
     margin-top: 0.25vh;
@@ -169,7 +180,7 @@ body {
 }
 
 .extra-deck > .extra-deck-banner {
-    background-color: gray;
+    background-color: rgb(49, 61, 77);
     width: 100%;
     height: 1.5vw;
     display: flex;
@@ -180,32 +191,30 @@ body {
 }
 
 .extra-deck-banner > .extra-deck-tag{
-    background-color: aqua;
     height: 100%;
     display: flex;
     flex-grow: 1;
     justify-content: flex-start;
     align-items: center;
     padding-left: 5px;
+    font-family: effect-text;
+    color: white;
+    font-size: 1.75vh;
 }
 
 .extra-deck-banner > .extra-deck-sort{
-    background-color: aquamarine;
     height: 100%;
     flex-grow: 1;
     justify-content: center;
 }
 
 .extra-deck-banner > .extra-deck-details {
-    background-color: azure;
     height: 100%;
     flex-grow: 1;
     justify-content: flex-end;
 }
 
 .extra-deck > .extra-deck-builder {
-    background-color: darkblue;
-    width: auto;
     height: 6.5vw;
     display: grid;
     padding: 0.25vh;
@@ -215,11 +224,10 @@ body {
 }
 
 .extra-deck-builder > .extra-deck-spot {
-    background-color: rgb(7, 7, 46);
+    background-color: rgba(7, 7, 46, 0.25);
 }
 
 .deck-builder > .side-deck {
-    background-color: darkorange;
     width: 100%; /*100% of deckbuilder window*/
     height: 15vh;
     margin-top: 0.25vh;
@@ -229,7 +237,7 @@ body {
 }
 
 .side-deck >.side-deck-banner {
-    background-color: gray;
+    background-color: rgb(49, 61, 77);
     width: 100%;
     height: 1.5vw;
     display: flex;
@@ -237,31 +245,30 @@ body {
 }
 
 .side-deck-banner > .side-deck-tag{
-    background-color: aqua;
     height: 100%;
     display: flex;
     flex-grow: 1;
     justify-content: flex-start;
     align-items: center;
     padding-left: 5px;
+    font-family: effect-text;
+    color: white;
+    font-size: 1.75vh;
 }
 
 .side-deck-banner > .side-deck-sort{
-    background-color: aquamarine;
     height: 100%;
     flex-grow: 1;
     justify-content: center;
 }
 
 .side-deck-banner > .side-deck-details {
-    background-color: azure;
     height: 100%;
     flex-grow: 1;
     justify-content: flex-end;
 }
 
 .side-deck > .side-deck-builder {
-    background-color: darkgreen;
     width: auto;
     height: 6.5vw;
     display: grid;
@@ -272,11 +279,11 @@ body {
 }
 
 .side-deck-builder > .side-deck-spot {
-    background-color: rgb(5, 43, 5);
+    background-color: rgba(5, 43, 5, 0.25);
 }
 
 .application > .card-applications {
-    background-color: black;
+    background-image: linear-gradient(to right, #01090e, #051219, #081922, #081f2c, #062537, #062537, #062537, #062537, #081f2c, #081922, #051219, #01090e);
     flex: 3 0 0;
     height: auto;
     display: flex;
@@ -285,7 +292,6 @@ body {
 }
 
 .card-applications > .card-viewer {
-    background-color: gray;
     width: 100%;
     height: 25vw;
     align-self: center;
@@ -294,7 +300,6 @@ body {
 }
 
 .card-viewer > #selected-card {
-    background-color: aliceblue;
     height: 100%;
     display: flex;
     flex: 2 0 0;
@@ -308,8 +313,8 @@ body {
 }
 
 .card-viewer > #selected-card-details {
-    background-color: rgb(101, 115, 128);
     height: 100%;
+    color: rgb(198, 203, 209);
     display: flex;
     flex: 5 0 0;
     flex-direction: column;
@@ -349,7 +354,6 @@ body {
 }
 
 .card-applications > .card-searcher {
-    background-color: gray;
     width: 100%;
     height: 50vh;
     margin-top: 0.25vh;
@@ -359,12 +363,11 @@ body {
 }
 
 .card-searcher > #card-search-banner {
-    background-color: aquamarine;
+    background-color: rgb(49, 61, 77);
     flex-grow: 1;
 }
 
 .card-searcher > #card-search-results {
-    background-color: rgb(127, 171, 209);
     flex-grow: 10;
     display: grid;
     grid-template-columns: repeat(2,1fr); /*you will adjust these to scale with deck size*/
@@ -374,7 +377,8 @@ body {
 }
 
 #card-search-spot {
-    background-color: blueviolet;
+    background-color: rgba(138, 43, 226, 0.25);
+
 }
 
 
