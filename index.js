@@ -133,5 +133,26 @@ deckForm.addEventListener('change', () => {
     renderDeck();
 })
 
+const updateDeckSelector = async () => {
+    const options = await fetchListDecks();
+    deckForm.innerHTML = `
+        <form id="deck-form">
+            <label for= "decks" > Choose a Deck:</label >
+            <select id="decks" name="deck-selector">
+
+            </select>
+        </form> 
+        `
+    options.forEach(option => {
+        const op = document.createElement('option')
+        op.value = option
+        op.textContent = option
+        deckForm[0].append(op)
+    })
+}
+
+updateDeckSelector()
+
 testCardView(80896940);
 populateDecks(initalizeDeck);
+
