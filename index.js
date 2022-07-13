@@ -114,6 +114,11 @@ const renderMainDeck = () => {
     //iterate througha array and append
     mainDeck.forEach(something => {
         let tempCard = document.createElement('img');
+        tempCard.addEventListener('contextmenu', (e) => {
+            e.preventDefault()
+            mainDeck.splice(mainDeck.indexOf(something), 1)
+            tempCard.remove()
+        })
         tempCard.classList.add('builder-img');
         tempCard.src = something['imageUrl'];
         mainDeckBuilder.append(tempCard);
@@ -126,6 +131,11 @@ const renderExtraDeck = () => {
     extraDeckBuilder.innerHTML = '';
     extraDeck.forEach(something => {
         let tempCard = document.createElement('img');
+        tempCard.addEventListener('contextmenu',(e) => {
+            e.preventDefault()
+            extraDeck.splice(extraDeck.indexOf(something), 1)
+            tempCard.remove()
+        })
         tempCard.classList.add('builder-img');
         tempCard.src = something['imageUrl'];
         extraDeckBuilder.append(tempCard);
@@ -137,6 +147,11 @@ const renderSideDeck = () => {
     sideDeckBuilder.innerHTML = '';
     sideDeck.forEach(something => {
         let tempCard = document.createElement('img');
+        tempCard.addEventListener('contextmenu', (e) => {
+            e.preventDefault()
+            sideDeck.splice(sideDeck.indexOf(something), 1)
+            tempCard.remove()
+        })
         tempCard.classList.add('builder-img');
         tempCard.src = something['imageUrl'];
         sideDeckBuilder.append(tempCard);

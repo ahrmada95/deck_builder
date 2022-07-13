@@ -21,24 +21,31 @@
 }
 
 .button {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
     border-radius: 0;
     color: #FFFFFF;
     font-family: effect-text;
-    font-size: 40px;
+    font-size: auto;
     font-weight: 100;
-    padding: 40px;
     background-color: #6284AB;
-    -webkit-box-shadow: 1px 1px 20px 0 #000000;
-    -moz-box-shadow: 1px 1px 20px 0 #000000;
-    box-shadow: 1px 1px 20px 0 #000000;
-    text-shadow: 1px 1px 20px #000000;
     border: solid #FFFFFF 1px;
-    text-decoration: none;
-    display: inline-block;
     cursor: pointer;
-    text-align: center;
+    height: 50%;
+    width: 15%;
+    margin-left: 10%;
+ }
+
+ .sort-button {
+    border-radius: 0;
+    color: #FFFFFF;
+    font-family: effect-text;
+    font-size: auto;
+    font-weight: 100;
+    background-color: #3e4042;
+    border: solid #FFFFFF 1px;
+    cursor: pointer;
+    height: 50%;
+    width: 15%;
+    margin-left: 5%;
  }
 
  .builder-img {
@@ -73,6 +80,7 @@ body {
     display: flex;
     height: 100%;
     flex: 1 0 0;
+    flex-direction: left;
     justify-content: flex-start;
     align-items: center;
     padding-left: 10px;
