@@ -92,12 +92,29 @@
     filter: brightness(0.5);
  }
 
+ .owned-button {
+    border-radius: 0;
+    color: #FFFFFF;
+    font-family: effect-text;
+    font-size: auto;
+    font-weight: 100;
+    background-color: #ff0000;
+    border: solid #FFFFFF 1px;
+    cursor: pointer;
+    height: 20%;
+    width: 100%;
+    margin-top: 2%;
+    align-items: center;
+ }
+
+ .owned-button:hover{
+    filter: brightness(0.5);
+ }
+
 
  .builder-img{
     width: 100%; 
  }
-
-
 
  .builder-img:hover {
     filter: brightness(1.4) contrast(1.4); 
@@ -399,30 +416,75 @@ body {
 .card-viewer > #selected-card {
     height: 100%;
     display: flex;
+    flex-direction: column;
     flex: 2 0 0;
     padding: 0.5vh;
 }
 
 #selected-card > #selected-card-img {
     display: flex;
-    margin-bottom: auto;
     width: 100%; 
 }
 
+#selected-card > #selected-card-info{
+    width: auto;
+    height: auto;
+    color: white;
+}
+
+#value-title {
+    font-family: properties-text;
+    font-size: 100%;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 0%;
+}
+
+#cardmarket-price {
+    font-family: stats-text;
+    margin-top: 2.5%;
+    margin-left: 10%;
+    font-size: 140%;
+}
+
+#cardmarket-price {
+    font-family: stats-text;
+    margin-top: 2.5%;
+    margin-left: 10%;
+    font-size: 140%;
+    margin-bottom: 0;
+}
+
+#tcgplayer-price {
+    font-family: stats-text;
+    margin-top: 0.5%;
+    margin-left: 10%;
+    font-size: 140%;
+    margin-bottom: 0;
+}
+
+#ebay-price {
+    font-family: stats-text;
+    margin-top: 0.5%;
+    margin-left: 10%;
+    font-size: 140%;
+    margin-bottom: 0;
+}
 .card-viewer > #selected-card-details {
     height: 100%;
     color: rgb(198, 203, 209);
     display: flex;
     flex: 5 0 0;
-    flex-direction: column;
     justify-content: center;
     vertical-align: top;
+    flex-direction: column;
 }
 
 #selected-card-details > #select-card-name {
     font-family: title-text;
     position: relative;
     flex: 1 0 0;
+    margin-left: 2%;
     font-size: 3vh;
 }
 
@@ -431,6 +493,7 @@ body {
     position: relative;
     font-size: 1.30vh;
     flex: 1 0 0;
+    margin-left: 2%;
     margin-bottom: 0.5vh;
 }
 
@@ -439,6 +502,7 @@ body {
     position: relative;
     font-size: 2vh;
     flex: 1 0 0;
+    margin-left: 2%;
     margin-bottom: 0.5vh;
 }
 
@@ -446,7 +510,11 @@ body {
     font-family: effect-text;
     font-size: 1.4vh;
     flex: 20 0 0;
+    margin-left: 5%;
+    margin-right: 5%;
     overflow: auto;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 #select-card-effects::-webkit-scrollbar {
@@ -517,9 +585,46 @@ body {
     flex: 10 0 0;
     display: grid;
     grid-template-columns: repeat(2,1fr); /*you will adjust these to scale with deck size*/
-    grid-template-rows: repeat(5,1fr); /*you will adjust these to scale with deck size*/
+    grid-template-rows: repeat(4,1fr); /*you will adjust these to scale with deck size*/
     column-gap: 0.25vh;
     row-gap: 0.25vh;
+}
+
+#card-search-results > .result-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.result-card > .result-img-container {
+    display: flex;
+    flex: 2 0 0;
+    height: 100%;
+    justify-content: end;
+    margin-right: 3%;
+}
+
+.result-img {
+    max-height: 85px;
+    align-self: center;
+}
+
+.result-card > .result-text-container {
+    flex: 8 0 0;
+    height: 100%;
+}
+
+.result-text-container > p {
+    color: white;
+    margin: 1%;
+    
+}
+
+#search-nav {
+    height: 2vh;
+    display: flex;
+    justify-content: center;
 }
 
 
