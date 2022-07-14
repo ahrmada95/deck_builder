@@ -1,7 +1,7 @@
 {
     "decks": {
         
-            "testDeck": {
+            "Ahnaf's Swordsoul Deck": {
             "mainDeck": [
                 {
                     "id": 1,
@@ -14,7 +14,8 @@
                     "level": 11,
                     "race": "Rock",
                     "attribute": "LIGHT",
-                    "imageUrl": "https://ygoprodeck.com/pics/27204311.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/27204311.jpg",
+                    "owned": true
                 },
                 {
                     "id": 2,
@@ -27,7 +28,8 @@
                     "level": 11,
                     "race": "Rock",
                     "attribute": "LIGHT",
-                    "imageUrl": "https://ygoprodeck.com/pics/27204311.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/27204311.jpg",
+                    "owned": true
                 },
                 {
                     "id": 3,
@@ -40,7 +42,8 @@
                     "level": 11,
                     "race": "Rock",
                     "attribute": "LIGHT",
-                    "imageUrl": "https://ygoprodeck.com/pics/27204311.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/27204311.jpg",
+                    "owned": true
                 },
                 {
                     "id": 4,
@@ -53,7 +56,8 @@
                     "level": 7,
                     "race": "Wyrm",
                     "attribute": "LIGHT",
-                    "imageUrl": "https://ygoprodeck.com/pics/87052196.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/87052196.jpg",
+                    "owned": true
                 },
                 {
                     "id": 5,
@@ -66,7 +70,8 @@
                     "level": 7,
                     "race": "Wyrm",
                     "attribute": "LIGHT",
-                    "imageUrl": "https://ygoprodeck.com/pics/87052196.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/87052196.jpg",
+                    "owned": true
                 },
                 {
                     "id": 6,
@@ -79,7 +84,8 @@
                     "level": 7,
                     "race": "Wyrm",
                     "attribute": "LIGHT",
-                    "imageUrl": "https://ygoprodeck.com/pics/87052196.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/87052196.jpg",
+                    "owned": true
                 },
                 {
                     "id": 7,
@@ -92,7 +98,8 @@
                     "level": 7,
                     "race": "Wyrm",
                     "attribute": "DARK",
-                    "imageUrl": "https://ygoprodeck.com/pics/23431858.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/23431858.jpg",
+                    "owned": true
                 },
                 {
                     "id": 8,
@@ -105,7 +112,8 @@
                     "level": 7,
                     "race": "Wyrm",
                     "attribute": "DARK",
-                    "imageUrl": "https://ygoprodeck.com/pics/23431858.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/23431858.jpg",
+                    "owned": true
                 },
                 {
                     "id": 9,
@@ -118,7 +126,8 @@
                     "level": 7,
                     "race": "Wyrm",
                     "attribute": "DARK",
-                    "imageUrl": "https://ygoprodeck.com/pics/23431858.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/23431858.jpg",
+                    "owned": true
                 },
                 {
                     "id": 10,
@@ -131,7 +140,8 @@
                     "level": 6,
                     "race": "Wyrm",
                     "attribute": "FIRE",
-                    "imageUrl": "https://ygoprodeck.com/pics/93490856.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/93490856.jpg",
+                    "owned": true
                 },
                 {
                     "id": 11,
@@ -144,7 +154,8 @@
                     "level": 6,
                     "race": "Wyrm",
                     "attribute": "FIRE",
-                    "imageUrl": "https://ygoprodeck.com/pics/93490856.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/93490856.jpg",
+                    "owned": true
                 },
                 {
                     "id": 12,
@@ -157,7 +168,8 @@
                     "level": 6,
                     "race": "Wyrm",
                     "attribute": "FIRE",
-                    "imageUrl": "https://ygoprodeck.com/pics/93490856.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/93490856.jpg",
+                    "owned": true
                 },
                 {
                     "id": 13,
@@ -170,7 +182,8 @@
                     "level": 4,
                     "race": "Wyrm",
                     "attribute": "WIND",
-                    "imageUrl": "https://ygoprodeck.com/pics/56495147.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/56495147.jpg",
+                    "owned": true
                 },
                 {
                     "id": 14,
@@ -183,7 +196,8 @@
                     "level": 4,
                     "race": "Wyrm",
                     "attribute": "WIND",
-                    "imageUrl": "https://ygoprodeck.com/pics/56495147.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/56495147.jpg",
+                    "owned": true
                 },
                 {
                     "id": 15,
@@ -196,7 +210,8 @@
                     "level": 4,
                     "race": "Wyrm",
                     "attribute": "WATER",
-                    "imageUrl": "https://ygoprodeck.com/pics/20001443.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/20001443.jpg",
+                    "owned": true
                 },
                 {
                     "id": 16,
@@ -209,7 +224,8 @@
                     "level": 4,
                     "race": "Wyrm",
                     "attribute": "WATER",
-                    "imageUrl": "https://ygoprodeck.com/pics/20001443.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/20001443.jpg",
+                    "owned": true
                 },
                 {
                     "id": 17,
@@ -222,7 +238,8 @@
                     "level": 4,
                     "race": "Wyrm",
                     "attribute": "WATER",
-                    "imageUrl": "https://ygoprodeck.com/pics/20001443.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/20001443.jpg",
+                    "owned": true
                 },
                 {
                     "id": 18,
@@ -235,7 +252,8 @@
                     "level": 4,
                     "race": "Spellcaster",
                     "attribute": "LIGHT",
-                    "imageUrl": "https://ygoprodeck.com/pics/55273560.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/55273560.jpg",
+                    "owned": true
                 },
                 {
                     "id": 19,
@@ -248,7 +266,8 @@
                     "level": 4,
                     "race": "Spellcaster",
                     "attribute": "LIGHT",
-                    "imageUrl": "https://ygoprodeck.com/pics/55273560.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/55273560.jpg",
+                    "owned": true
                 },
                 {
                     "id": 20,
@@ -261,7 +280,8 @@
                     "level": 4,
                     "race": "Wyrm",
                     "attribute": "WATER",
-                    "imageUrl": "https://ygoprodeck.com/pics/24557335.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/24557335.jpg",
+                    "owned": true
                 },
                 {
                     "id": 21,
@@ -274,7 +294,8 @@
                     "level": 3,
                     "race": "Zombie",
                     "attribute": "FIRE",
-                    "imageUrl": "https://ygoprodeck.com/pics/14558127.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/14558127.jpg",
+                    "owned": true
                 },
                 {
                     "id": 22,
@@ -287,7 +308,8 @@
                     "level": 3,
                     "race": "Zombie",
                     "attribute": "FIRE",
-                    "imageUrl": "https://ygoprodeck.com/pics/14558127.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/14558127.jpg",
+                    "owned": true
                 },
                 {
                     "id": 23,
@@ -300,7 +322,8 @@
                     "level": 3,
                     "race": "Zombie",
                     "attribute": "FIRE",
-                    "imageUrl": "https://ygoprodeck.com/pics/14558127.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/14558127.jpg",
+                    "owned": true
                 },
                 {
                     "id": 24,
@@ -313,7 +336,8 @@
                     "level": 1,
                     "race": "Spellcaster",
                     "attribute": "LIGHT",
-                    "imageUrl":"https://ygoprodeck.com/pics/97268402.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/97268402.jpg",
+                    "owned": true
                 },
                 {
                     "id": 25,
@@ -326,7 +350,8 @@
                     "level": 1,
                     "race": "Wyrm",
                     "attribute": "EARTH",
-                    "imageUrl":"https://ygoprodeck.com/pics/98159737.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/98159737.jpg",
+                    "owned": true
                 },
                 {
                     "id": 26,
@@ -339,7 +364,8 @@
                     "level": 1,
                     "race": "Wyrm",
                     "attribute": "EARTH",
-                    "imageUrl":"https://ygoprodeck.com/pics/98159737.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/98159737.jpg",
+                    "owned": true
                 },
                 {
                     "id": 27,
@@ -352,7 +378,8 @@
                     "level": 1,
                     "race": "Wyrm",
                     "attribute": "EARTH",
-                    "imageUrl":"https://ygoprodeck.com/pics/98159737.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/98159737.jpg",
+                    "owned": true
                 },
                 {
                     "id": 28,
@@ -361,7 +388,8 @@
                     "type": "Spell Card",
                     "desc": "Banish 10 cards from the top of your Deck, face-down; draw 2 cards. You can only activate 1 \"Pot of Desires\" per turn.",
                     "race": "Normal",
-                    "imageUrl":"https://ygoprodeck.com/pics/35261759.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/35261759.jpg",
+                    "owned": true
                 },
                 {
                     "id": 29,
@@ -370,7 +398,8 @@
                     "type": "Spell Card",
                     "desc": "Banish 10 cards from the top of your Deck, face-down; draw 2 cards. You can only activate 1 \"Pot of Desires\" per turn.",
                     "race": "Normal",
-                    "imageUrl":"https://ygoprodeck.com/pics/35261759.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/35261759.jpg",
+                    "owned": true
                 },
                 {
                     "id": 30,
@@ -379,7 +408,8 @@
                     "type": "Spell Card",
                     "desc": "Add 1 \"Swordsoul\" monster from your Deck to your hand, or if you control a Synchro Monster, you can add 1 Wyrm monster instead. If this card is banished: You can target 1 \"Swordsoul\" monster, or Wyrm monster, you control; increase or decrease its Level by 1 until the end of this turn. You can only use each effect of \"Swordsoul Emergence\" once per turn.",
                     "race": "Normal",
-                    "imageUrl":"https://ygoprodeck.com/pics/56465981.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/56465981.jpg",
+                    "owned": true
                 },
                 {
                     "id": 31,
@@ -388,7 +418,8 @@
                     "type": "Spell Card",
                     "desc": "Add 1 \"Swordsoul\" monster from your Deck to your hand, or if you control a Synchro Monster, you can add 1 Wyrm monster instead. If this card is banished: You can target 1 \"Swordsoul\" monster, or Wyrm monster, you control; increase or decrease its Level by 1 until the end of this turn. You can only use each effect of \"Swordsoul Emergence\" once per turn.",
                     "race": "Normal",
-                    "imageUrl":"https://ygoprodeck.com/pics/56465981.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/56465981.jpg",
+                    "owned": true
                 },
                 {
                     "id": 32,
@@ -397,7 +428,8 @@
                     "type": "Spell Card",
                     "desc": "Add 1 \"Swordsoul\" monster from your Deck to your hand, or if you control a Synchro Monster, you can add 1 Wyrm monster instead. If this card is banished: You can target 1 \"Swordsoul\" monster, or Wyrm monster, you control; increase or decrease its Level by 1 until the end of this turn. You can only use each effect of \"Swordsoul Emergence\" once per turn.",
                     "race": "Normal",
-                    "imageUrl":"https://ygoprodeck.com/pics/56465981.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/56465981.jpg",
+                    "owned": true
                 },
                 {
                     "id": 33,
@@ -406,7 +438,8 @@
                     "type": "Spell Card",
                     "desc": "Send 1 Wyrm monster from your Deck to the GY, then, if you control a face-up non-Effect Monster, you can add from your Deck to your hand 1 \"Tenyi\" monster with a different name from the monster sent to the GY. You can only activate 1 \"Vessel for the Dragon Cycle\" per turn.",
                     "race": "Normal",
-                    "imageUrl":"https://ygoprodeck.com/pics/65124425.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/65124425.jpg",
+                    "owned": true
                 },
                 {
                     "id": 34,
@@ -415,7 +448,8 @@
                     "type": "Spell Card",
                     "desc": "Send 1 Wyrm monster from your Deck to the GY, then, if you control a face-up non-Effect Monster, you can add from your Deck to your hand 1 \"Tenyi\" monster with a different name from the monster sent to the GY. You can only activate 1 \"Vessel for the Dragon Cycle\" per turn.",
                     "race": "Normal",
-                    "imageUrl":"https://ygoprodeck.com/pics/65124425.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/65124425.jpg",
+                    "owned": true
                 },
                 {
                     "id": 35,
@@ -424,7 +458,8 @@
                     "type": "Spell Card",
                     "desc": "Target 1 monster in your opponent's GY; banish it, and if you do, until the end of the next turn, its effects are negated, as well as the activated effects and effects on the field of monsters with the same original name.",
                     "race": "Quick-Play",
-                    "imageUrl":"https://ygoprodeck.com/pics/24224830.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/24224830.jpg",
+                    "owned": true
                 },
                 {
                     "id": 36,
@@ -433,7 +468,8 @@
                     "type": "Spell Card",
                     "desc": "Send any number of other cards from your hand and/or field to the GY; choose that many Effect Monsters your opponent controls, and until the end of this turn, their ATK is halved, also their effects are negated. In response to this card's activation, your opponent cannot activate cards, or the effects of cards, with the same original type (Monster/Spell/Trap) as the cards sent to the GY to activate this card. You can only activate 1 \"Forbidden Droplet\" per turn.",
                     "race": "Quick-Play",
-                    "imageUrl":"https://ygoprodeck.com/pics/24299458.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/24299458.jpg",
+                    "owned": true
                 },
                 {
                     "id": 37,
@@ -442,7 +478,8 @@
                     "type": "Spell Card",
                     "desc": "Send any number of other cards from your hand and/or field to the GY; choose that many Effect Monsters your opponent controls, and until the end of this turn, their ATK is halved, also their effects are negated. In response to this card's activation, your opponent cannot activate cards, or the effects of cards, with the same original type (Monster/Spell/Trap) as the cards sent to the GY to activate this card. You can only activate 1 \"Forbidden Droplet\" per turn.",
                     "race": "Quick-Play",
-                    "imageUrl":"https://ygoprodeck.com/pics/24299458.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/24299458.jpg",
+                    "owned": true
                 },
                 {
                     "id": 38,
@@ -451,7 +488,8 @@
                     "type": "Spell Card",
                     "desc": "Send any number of other cards from your hand and/or field to the GY; choose that many Effect Monsters your opponent controls, and until the end of this turn, their ATK is halved, also their effects are negated. In response to this card's activation, your opponent cannot activate cards, or the effects of cards, with the same original type (Monster/Spell/Trap) as the cards sent to the GY to activate this card. You can only activate 1 \"Forbidden Droplet\" per turn.",
                     "race": "Quick-Play",
-                    "imageUrl":"https://ygoprodeck.com/pics/24299458.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/24299458.jpg",
+                    "owned": true
                 },
                 {
                     "id": 39,
@@ -460,7 +498,8 @@
                     "type": "Spell Card",
                     "desc": "Tribute 1 Wyrm monster; add 1 Wyrm monster from your Deck to your hand, or if you Tributed a non-Effect Monster to activate this card, you can Special Summon it instead, but negate its effects. During your Main Phase, if you control a face-up non-Effect Monster: You can banish this card from your GY; add 1 \"Tenyi\" card from your Deck to your hand. You can only use 1 \"Heavenly Dragon Circle\" effect per turn, and only once that turn.",
                     "race": "Quick-Play",
-                    "imageUrl":"https://ygoprodeck.com/pics/51684157.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/51684157.jpg",
+                    "owned": true
                 },
                 {
                     "id": 40,
@@ -469,7 +508,8 @@
                     "type": "Trap Card",
                     "desc": "Target 1 face-up monster your opponent controls; negate its effects (until the end of this turn), then, if this card was Set before activation and is on the field at resolution, for the rest of this turn all other Spell/Trap effects in this column are negated. If you control no cards, you can activate this card from your hand.",
                     "race": "Normal",
-                    "imageUrl":"https://ygoprodeck.com/pics/10045474.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/10045474.jpg",
+                    "owned": true
                 },
                 {
                     "id": 41,
@@ -478,7 +518,8 @@
                     "type": "Trap Card",
                     "desc": "Target 1 face-up monster your opponent controls; negate its effects (until the end of this turn), then, if this card was Set before activation and is on the field at resolution, for the rest of this turn all other Spell/Trap effects in this column are negated. If you control no cards, you can activate this card from your hand.",
                     "race": "Normal",
-                    "imageUrl":"https://ygoprodeck.com/pics/10045474.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/10045474.jpg",
+                    "owned": true
                 },
                 {
                     "id": 42,
@@ -487,7 +528,8 @@
                     "type": "Trap Card",
                     "desc": "Target 1 Wyrm monster you control and 2 cards your opponent controls; destroy them. If this card is banished: You can Special Summon 1 \"Swordsoul Token\" (Wyrm/Tuner/WATER/Level 4/ATK 0/DEF 0). While that Token is in the Monster Zone, the player who Summoned it cannot Special Summon monsters from the Extra Deck, except Synchro Monsters. You can only use each effect of \"Swordsoul Blackout\" once per turn.",
                     "race": "Normal",
-                    "imageUrl":"https://ygoprodeck.com/pics/14821890.jpg"
+                    "imageUrl":"https://ygoprodeck.com/pics/14821890.jpg",
+                    "owned": true
                 }
             ],
             "extraDeck": [
@@ -501,7 +543,8 @@
                     "race": "Wyrm",
                     "attribute": "EARTH",
                     "archetype": "Tenyi",
-                    "imageUrl": "https://ygoprodeck.com/pics/32519092.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/32519092.jpg",
+                    "owned": true
                 },
                 {
                     "id": 2,
@@ -513,7 +556,8 @@
                     "race": "Wyrm",
                     "attribute": "EARTH",
                     "archetype": "Tenyi",
-                    "imageUrl": "https://ygoprodeck.com/pics/32519092.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/32519092.jpg",
+                    "owned": true
                 },
                 {
                     "id": 3,
@@ -524,7 +568,8 @@
                     "atk": 1000,
                     "race": "Wyrm",
                     "attribute": "EARTH",
-                    "imageUrl": "https://ygoprodeck.com/pics/32519092.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/32519092.jpg",
+                    "owned": true
                 },
                 {
                     "id": 4,
@@ -535,7 +580,8 @@
                     "atk": 1600,
                     "race": "Wyrm",
                     "attribute": "FIRE",
-                    "imageUrl": "https://ygoprodeck.com/pics/78917791.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/78917791.jpg",
+                    "owned": true
                 },
                 {
                     "id": 5,
@@ -546,7 +592,8 @@
                     "atk": 2600,
                     "race": "Wyrm",
                     "attribute": "LIGHT",
-                    "imageUrl": "https://ygoprodeck.com/pics/23935886.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/23935886.jpg",
+                    "owned": true
                 },
                 {
                     "id": 6,
@@ -559,7 +606,8 @@
                     "level": 7,
                     "race": "Wyrm",
                     "attribute": "DARK",
-                    "imageUrl": "https://ygoprodeck.com/pics/43202238.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/43202238.jpg",
+                    "owned": true
                 },
                 {
                     "id": 7,
@@ -572,7 +620,8 @@
                     "level": 8,
                     "race": "Wyrm",
                     "attribute": "LIGHT",
-                    "imageUrl": "https://ygoprodeck.com/pics/83755611.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/83755611.jpg",
+                    "owned": true
                 },
                 {
                     "id": 8,
@@ -585,7 +634,8 @@
                     "level": 8,
                     "race": "Wyrm",
                     "attribute": "LIGHT",
-                    "imageUrl": "https://ygoprodeck.com/pics/83755611.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/83755611.jpg",
+                    "owned": true
                 },
                 {
                     "id": 9,
@@ -598,7 +648,8 @@
                     "level": 8,
                     "race": "Wyrm",
                     "attribute": "LIGHT",
-                    "imageUrl": "https://ygoprodeck.com/pics/69248256.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/69248256.jpg",
+                    "owned": true
                 },
                 {
                     "id": 10,
@@ -611,7 +662,8 @@
                     "level": 8,
                     "race": "Wyrm",
                     "attribute": "LIGHT",
-                    "imageUrl": "https://ygoprodeck.com/pics/69248256.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/69248256.jpg",
+                    "owned": true
                 },
                 {
                     "id": 11,
@@ -624,7 +676,8 @@
                     "level": 8,
                     "race": "Wyrm",
                     "attribute": "DARK",
-                    "imageUrl": "https://ygoprodeck.com/pics/5041348.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/5041348.jpg",
+                    "owned": true
                 },
                 {
                     "id": 12,
@@ -637,7 +690,8 @@
                     "level": 9,
                     "race": "Wyrm",
                     "attribute": "LIGHT",
-                    "imageUrl": "https://ygoprodeck.com/pics/19048328.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/19048328.jpg",
+                    "owned": true
                 },
                 {
                     "id": 13,
@@ -650,7 +704,8 @@
                     "level": 10,
                     "race": "Wyrm",
                     "attribute": "FIRE",
-                    "imageUrl": "https://ygoprodeck.com/pics/47710198.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/47710198.jpg",
+                    "owned": true
                 },
                 {
                     "id": 14,
@@ -663,7 +718,8 @@
                     "level": 10,
                     "race": "Warrior",
                     "attribute": "WIND",
-                    "imageUrl": "https://ygoprodeck.com/pics/84815190.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/84815190.jpg",
+                    "owned": true
                 },
                 {
                     "id": 15,
@@ -676,7 +732,8 @@
                     "level": 10,
                     "race": "Wyrm",
                     "attribute": "WATER",
-                    "imageUrl": "https://ygoprodeck.com/pics/96633955.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/96633955.jpg",
+                    "owned": true
                 }         
             ],
             "sideDeck": [
@@ -687,7 +744,8 @@
                     "type": "Spell Card",
                     "desc": "Discard 1 card, then target up to 2 Spells/Traps on the field; destroy them.",
                     "race": "Quick-Play",
-                    "imageUrl": "https://ygoprodeck.com/pics/43898403.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/43898403.jpg",
+                    "owned": true
                 },
                 {
                     "id": 2,
@@ -696,7 +754,8 @@
                     "type": "Spell Card",
                     "desc": "Discard 1 card, then target up to 2 Spells/Traps on the field; destroy them.",
                     "race": "Quick-Play",
-                    "imageUrl": "https://ygoprodeck.com/pics/43898403.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/43898403.jpg",
+                    "owned": true
                 },
                 {
                     "id": 3,
@@ -705,7 +764,8 @@
                     "type": "Spell Card",
                     "desc": "Declare 1 card name; banish 1 of that declared card from your Main Deck, and if you do, negate its effects, as well as the activated effects and effects on the field of cards with the same original name, until the end of this turn. You can only activate 1 \"Crossout Designator\" per turn.",
                     "race": "Quick-Play",
-                    "imageUrl": "https://ygoprodeck.com/pics/65681983.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/65681983.jpg",
+                    "owned": true
                 },
                 {
                     "id": 4,
@@ -714,7 +774,8 @@
                     "type": "Spell Card",
                     "desc": "Declare 1 card name; banish 1 of that declared card from your Main Deck, and if you do, negate its effects, as well as the activated effects and effects on the field of cards with the same original name, until the end of this turn. You can only activate 1 \"Crossout Designator\" per turn.",
                     "race": "Quick-Play",
-                    "imageUrl": "https://ygoprodeck.com/pics/65681983.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/65681983.jpg",
+                    "owned": true
                 },
                 {
                     "id": 5,
@@ -723,7 +784,8 @@
                     "type": "Spell Card",
                     "desc": "Declare 1 card name; banish 1 of that declared card from your Main Deck, and if you do, negate its effects, as well as the activated effects and effects on the field of cards with the same original name, until the end of this turn. You can only activate 1 \"Crossout Designator\" per turn.",
                     "race": "Quick-Play",
-                    "imageUrl": "https://ygoprodeck.com/pics/65681983.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/65681983.jpg",
+                    "owned": true
                 },
                 {
                     "id": 6,
@@ -732,7 +794,8 @@
                     "type": "Trap Card",
                     "desc": "At the end of the Battle Phase, if your opponent controls more cards than you do: You can make your opponent banish cards from their field face-down so they control the same number of cards as you do. If you control no cards, you can activate this card from your hand.",
                     "race": "Normal",
-                    "imageUrl": "https://ygoprodeck.com/pics/15693423.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/15693423.jpg",
+                    "owned": true
                 },
                 {
                     "id": 7,
@@ -741,7 +804,8 @@
                     "type": "Trap Card",
                     "desc": "At the end of the Battle Phase, if your opponent controls more cards than you do: You can make your opponent banish cards from their field face-down so they control the same number of cards as you do. If you control no cards, you can activate this card from your hand.",
                     "race": "Normal",
-                    "imageUrl": "https://ygoprodeck.com/pics/15693423.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/15693423.jpg",
+                    "owned": true
                 },
                 {
                     "id": 8,
@@ -750,7 +814,8 @@
                     "type": "Trap Card",
                     "desc": "At the end of the Battle Phase, if your opponent controls more cards than you do: You can make your opponent banish cards from their field face-down so they control the same number of cards as you do. If you control no cards, you can activate this card from your hand.",
                     "race": "Normal",
-                    "imageUrl": "https://ygoprodeck.com/pics/15693423.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/15693423.jpg",
+                    "owned": true
                 },
                 {
                     "id": 9,
@@ -759,7 +824,8 @@
                     "type": "Trap Card",
                     "desc": "Both players must Set Spell Cards before activating them, and cannot activate them until their next turn after Setting them.",
                     "race": "Continuous",
-                    "imageUrl": "https://ygoprodeck.com/pics/58921041.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/58921041.jpg",
+                    "owned": true
                 },
                 {
                     "id": 10,
@@ -768,7 +834,8 @@
                     "type": "Trap Card",
                     "desc": "Both players must Set Spell Cards before activating them, and cannot activate them until their next turn after Setting them.",
                     "race": "Continuous",
-                    "imageUrl": "https://ygoprodeck.com/pics/58921041.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/58921041.jpg",
+                    "owned": true
                 },
                 {
                     "id": 11,
@@ -777,7 +844,8 @@
                     "type": "Trap Card",
                     "desc": "Both players must Set Spell Cards before activating them, and cannot activate them until their next turn after Setting them.",
                     "race": "Continuous",
-                    "imageUrl": "https://ygoprodeck.com/pics/58921041.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/58921041.jpg",
+                    "owned": true
                 },
                 {
                     "id": 12,
@@ -786,7 +854,8 @@
                     "type": "Trap Card",
                     "desc": "Each player can only control 1 Type of monster. Send all other face-up monsters they control to the GY.",
                     "race": "Continuous",
-                    "imageUrl": "https://ygoprodeck.com/pics/90846359.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/90846359.jpg",
+                    "owned": true
                 },
                 {
                     "id": 13,
@@ -795,7 +864,8 @@
                     "type": "Trap Card",
                     "desc": "Each player can only control 1 Type of monster. Send all other face-up monsters they control to the GY.",
                     "race": "Continuous",
-                    "imageUrl": "https://ygoprodeck.com/pics/90846359.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/90846359.jpg",
+                    "owned": true
                 },
                 {
                     "id": 14,
@@ -804,7 +874,8 @@
                     "type": "Trap Card",
                     "desc": "Each player can only control 1 Type of monster. Send all other face-up monsters they control to the GY.",
                     "race": "Continuous",
-                    "imageUrl": "https://ygoprodeck.com/pics/90846359.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/90846359.jpg",
+                    "owned": true
                 },
                 {
                     "id": 15,
@@ -813,7 +884,8 @@
                     "type": "Trap Card",
                     "desc": "When your opponent activates a Trap Card: Negate the activation, and if you do, Set that card face-down, then they can Set 1 other Trap directly from their Deck. For the rest of this turn after this card resolves, your opponent cannot activate Trap Cards. You can activate this card from your hand by paying half your LP.",
                     "race": "Counter",
-                    "imageUrl": "https://ygoprodeck.com/pics/23002292.jpg"
+                    "imageUrl": "https://ygoprodeck.com/pics/23002292.jpg",
+                    "owned": true
                 }
             ]
             },

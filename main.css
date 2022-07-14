@@ -49,12 +49,49 @@
     cursor: pointer;
     height: 50%;
     width: 15%;
-    margin-left: 5%;
+    margin-left: 3%;
  }
 
  .sort-button:hover{
-    filter:brightness(1.5)
+    filter:brightness(2)
  }
+
+ .create-button {
+    border-radius: 0;
+    color: #FFFFFF;
+    font-family: effect-text;
+    font-size: auto;
+    font-weight: 100;
+    background-color: #31daa1;
+    border: solid #FFFFFF 1px;
+    cursor: pointer;
+    height: 50%;
+    width: 15%;
+    margin-left: 3%;
+ }
+
+ .create-button:hover{
+    filter: hue-rotate(180deg);
+ }
+
+ .delete-button {
+    border-radius: 0;
+    color: #FFFFFF;
+    font-family: effect-text;
+    font-size: auto;
+    font-weight: 100;
+    background-color: #ff0000;
+    border: solid #FFFFFF 1px;
+    cursor: pointer;
+    height: 50%;
+    width: 15%;
+    margin-left: 3%;
+ }
+
+ .delete-button:hover{
+    filter: brightness(0.5);
+ }
+
 
  .builder-img{
     width: 100%; 
