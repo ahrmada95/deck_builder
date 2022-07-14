@@ -92,11 +92,13 @@ const populateDecks = async (foo) => {
     renderMainDeck();
     renderExtraDeck();
     renderSideDeck();
+
+    const sortedDeck = sortDeck(mainDeck);
+    console.log(sortedDeck);   
 }
 
 //render main deck
 const renderMainDeck = () => {
-    console.log(mainDeck);
     //clear out builder
     mainDeckBuilder.innerHTML = '';
     if(mainDeck.length > 40 && mainDeck.length <= 50) {
@@ -201,6 +203,56 @@ const renderDeck = () => {
     renderMainDeck();
     renderExtraDeck();
     renderSideDeck();
+}
+
+//sort deck according to requirements
+const sortDeck = (unsortedDeck) => {
+    let linkMonArray = [];
+    let xyzMonArray =[];
+    let synchroMonArray = [];
+    let fusionMonArray =[];
+    let monArray = [];
+    let spellArray = [];
+    let trapArray = [];
+
+    //fill arrays by card type
+    unsortedDeck.forEach(card => {
+        if(card.type === "Link Monster"){
+            linkMonArray.push(card);
+        } else if(card.type === "XYZ Monster"){
+            xyzMonArray.push(card);
+        } else if(card.type === "Synchro Monster"){
+            synchroMonArray.push(card);
+        } else if(card.type === "Fusion Monster"){
+            fusionMonArray.push(card);
+        } else if(card.type.includes("Monster")){
+            monArray.push(card);
+        } else if(card.type === "Spell Card") {
+            spellArray.push(card);
+        } else if(card.type === "Trap Card") {
+            trapArray.push(card)
+        }
+    })
+
+    const compareCard = (a,b) => {
+        if (a.name < b.name) {
+            return -1;
+        } else if (a.name > b.name){
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    //sort each array 
+    linkMonArray.sort(compareCard);
+    xyzMonArray.sort(compareCard);
+    synchroMonArray.sort(compareCard);
+    fusionMonArray.sort(compareCard);
+    monArray.sort(compareCard);
+    spellArray.sort(compareCard);
+    trapArray.sort(compareCard);
+    return [...linkMonArray, ...xyzMonArray, ...synchroMonArray, ...fusionMonArray, ...monArray, ...spellArray, ...trapArray];
 }
 
 const testCardView = async(cardNameOrId) => {
