@@ -220,7 +220,7 @@ body {
     
 }
 
-.deck-value > #current-value {
+.deck-value > #card-count {
     color: white;
     height: 50%;
     display: flex;
@@ -231,7 +231,7 @@ body {
     font-size: 2.25vh;
 }
 
-.deck-value > #owned-value {
+.deck-value > #owned-card-count {
     color: white;
     height: 50%;
     display: flex;

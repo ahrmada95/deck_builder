@@ -25,8 +25,8 @@ let sideDeck = []; //empty array to hold side deck
 let listDecks = []; //empty array to hold the list of deck names from db, will use to fill form options
 //card currently held in the card viewer
 let displayCard = {deckName: '', obj: ''};
-let deckValue;
-let ownedValue;
+let numCards = 0;
+let numCardsOwned = 0;
 
 //get urls for Yu-Gi-Oh! Prodeck API
 const apiBaseUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?';
@@ -130,7 +130,12 @@ const renderMainDeck = () => {
     //iterate througha array and append
     mainDeck.forEach(something => {
         let tempCard = document.createElement('img');
+        numCards++;
+        if(something.owned === true) {
+            numCardsOwned++;
+        }
         tempCard.addEventListener('contextmenu', (e) => {
+            numCards--;
             e.preventDefault()
             mainDeck.splice(mainDeck.indexOf(something), 1)
             tempCard.remove()
@@ -173,8 +178,13 @@ const renderExtraDeck = () => {
     //iterate througha array and appen
     extraDeckBuilder.innerHTML = '';
     extraDeck.forEach(something => {
+        numCards++;
+        if(something.owned === true){
+            numCardsOwned++;
+        }
         let tempCard = document.createElement('img');
-        tempCard.addEventListener('contextmenu',(e) => {    
+        tempCard.addEventListener('contextmenu',(e) => {   
+            numCards--; 
             e.preventDefault()
             extraDeck.splice(extraDeck.indexOf(something), 1)
             tempCard.remove()
@@ -217,8 +227,13 @@ const renderExtraDeck = () => {
 const renderSideDeck = () => {
     sideDeckBuilder.innerHTML = '';
     sideDeck.forEach(something => {
+        numCards++;
+        if(something.owned === true){
+            numCardsOwned++;
+        }
         let tempCard = document.createElement('img');
         tempCard.addEventListener('contextmenu', (e) => {
+            numCards--;
             e.preventDefault()
             sideDeck.splice(sideDeck.indexOf(something), 1)
             tempCard.remove()
@@ -257,6 +272,8 @@ const renderSideDeck = () => {
 }
 //render deck application portion
 const renderDeck = () => {
+    numCards = 0;
+    numCardsOwned = 0;
     renderMainDeck();
     renderExtraDeck();
     renderSideDeck();
@@ -342,10 +359,12 @@ ownedBtn.addEventListener('click', () => {
     if(ownedBtn.textContent === 'Not Owned') {
         ownedBtn.style.backgroundColor = '#007500';
         ownedBtn.textContent = 'Owned';
+        numCardsOwned++;
     }
     else {
         ownedBtn.style.backgroundColor = '#ff0000';
         ownedBtn.textContent = 'Not Owned';
+        numCardsOwned--;
     }
     switch(displayCard.deck) {
         case "mainDeck": {
