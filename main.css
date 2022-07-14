@@ -487,7 +487,7 @@ body {
 
 #cardmarket-price {
     font-family: stats-text;
-    margin-top: 2.5%;
+    margin-top: 0.5%;
     margin-left: 10%;
     font-size: 140%;
     margin-bottom: 0;
@@ -664,4 +664,17 @@ body {
     justify-content: center;
 }
 
+.search-card-title {
+    font-family: title-text;
+    font-size: 25px;
+}
 
+.search-card-details {
+    font-family: properties-text;
+    font-size: 15px;
+}
+
+.search-card-stat {
+    font-family: stats-text;
+    font-size: 20px;
+}
