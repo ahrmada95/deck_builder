@@ -413,7 +413,10 @@ const updateDeckSelector = async () => {
     })
 }
 
-
+setInterval(() => {
+    document.getElementById('card-count').textContent = `Number of Cards: ${numCards}`
+    document.getElementById('owned-card-count').textContent = `Owned: ${numCardsOwned}`
+}, 100);
 
 populateDecks(initalizeDeck);
 
