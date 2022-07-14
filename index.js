@@ -49,6 +49,7 @@ const cardMarketPrice = document.querySelector('#cardmarket-price');
 const tcgPlayerPrice = document.querySelector('#tcgplayer-price');
 const ebayPrice = document.querySelector('#ebay-price');
 const ownedBtn = document.querySelector("#selected-card-info > button"); 
+const searchBar = document.querySelector('#card-search-bar');
 
 //API CALL: fetch request to search by card's name
 const fetchByName = async (cardName) => {
@@ -68,6 +69,15 @@ const fetchById = async (cardId) => {
     let res = await req.json();
     //return response, JUST THE CARD INFORMATION
     return res['data']['0'];
+}
+
+const fetchSearch = async(cardName) => {
+    //request form api
+    let req = await fetch(`${urlCardId}${cardId}`);
+    //get response back as json
+    let res = await req.json();
+    //return response, JUST THE CARD INFORMATION
+    return res['data'];
 }
 
 //DB CALL: fetch list of deck names
@@ -412,6 +422,14 @@ const updateDeckSelector = async () => {
         deckForm[0].append(op)
     })
 }
+
+searchBar.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const searchParam = searchBar['card-name'].value;
+    if (searchParam != ''){
+
+    }
+})
 
 setInterval(() => {
     document.getElementById('card-count').textContent = `Number of Cards: ${numCards}`
