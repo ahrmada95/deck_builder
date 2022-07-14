@@ -470,6 +470,11 @@ body {
     width: auto;
     height: auto;
     color: white;
+    overflow: auto;
+}
+
+#selected-card-info::-webkit-scrollbar {
+    visibility: hidden;
 }
 
 #value-title {
