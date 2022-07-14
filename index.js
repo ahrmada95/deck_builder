@@ -413,10 +413,69 @@ const updateDeckSelector = async () => {
     })
 }
 
+let isDragging = false;
+
+cardViewImg.addEventListener('dragstart', (e) => {
+    isDragging = true;
+})
+
+cardViewImg.addEventListener('dragend', () => {
+    isDragging = false;
+})
+
+mainDeckBuilder.addEventListener('dragenter', (e) => {
+    e.preventDefault()
+})
+
+mainDeckBuilder.addEventListener('dragover', (e) => {
+    e.preventDefault()
+})
+
+mainDeckBuilder.addEventListener('drop', () => {
+    console.log('dropped')
+    if (isDragging) {
+        mainDeck.push(mainDeck[0])
+        renderDeck()
+    }
+})
+
+extraDeckBuilder.addEventListener('dragenter', (e) => {
+    e.preventDefault()
+})
+
+extraDeckBuilder.addEventListener('dragover', (e) => {
+    e.preventDefault()
+})
+
+extraDeckBuilder.addEventListener('drop', () => {
+    console.log('dropped')
+    if (isDragging && extraDeck.length < 15) {
+        extraDeck.push(extraDeck[0])
+        renderDeck()
+    }
+})
+
+sideDeckBuilder.addEventListener('dragenter', (e) => {
+    e.preventDefault()
+})
+
+sideDeckBuilder.addEventListener('dragover', (e) => {
+    e.preventDefault()
+})
+
+sideDeckBuilder.addEventListener('drop', () => {
+    console.log('dropped')
+    if (isDragging && sideDeck.length < 15) {
+        sideDeck.push(sideDeck[0])
+        renderDeck()
+    }
+})
+
 setInterval(() => {
     document.getElementById('card-count').textContent = `Number of Cards: ${numCards}`
     document.getElementById('owned-card-count').textContent = `Owned: ${numCardsOwned}`
 }, 100);
+
 
 populateDecks(initalizeDeck);
 
