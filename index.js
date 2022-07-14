@@ -28,6 +28,11 @@ let displayCard = {deckName: '', obj: ''};
 let numCards = 0;
 let numCardsOwned = 0;
 
+//results page shit
+let results = []; //empty results array
+let totalPages = 0;
+let currPage = 0;
+
 //get urls for Yu-Gi-Oh! Prodeck API
 const apiBaseUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?';
 const urlCardName = `${apiBaseUrl}name=`;
@@ -51,14 +56,9 @@ const tcgPlayerPrice = document.querySelector('#tcgplayer-price');
 const ebayPrice = document.querySelector('#ebay-price');
 const ownedBtn = document.querySelector("#selected-card-info > button"); 
 const searchBar = document.querySelector('#card-search-bar');
-const resultCard0 = document.querySelector('#result-card-0');
-const resultCard1 = document.querySelector('#result-card-1');
-const resultCard2 = document.querySelector('#result-card-2');
-const resultCard3 = document.querySelector('#result-card-3');
-const resultCard4 = document.querySelector('#result-card-4');
-const resultCard5 = document.querySelector('#result-card-5');
-const resultCard6 = document.querySelector('#result-card-6');
-const resultCard7 = document.querySelector('#result-card-7');
+const prevBtn = document.querySelector('#left-button');
+const nextBtn = document.querySelector('#right-button');
+
 
 //API CALL: fetch request to search by card's name
 const fetchByName = async (cardName) => {
@@ -432,14 +432,101 @@ const updateDeckSelector = async () => {
     })
 }
 
+const resultCard0img = document.querySelector("#result-card-0 > div.result-img-container > img");
+const resultCard0title = document.querySelector("#result-card-0 > div.result-text-container > p.search-card-title");
+const resultCard0details = document.querySelector("#result-card-0 > div.result-text-container > p.search-card-details");
+const resultCard0stats = document.querySelector("#result-card-0 > div.result-text-container > p.search-card-stat");
+
+const resultCard1img = document.querySelector("#result-card-1 > div.result-img-container > img");
+const resultCard1title = document.querySelector("#result-card-1 > div.result-text-container > p.search-card-title");
+const resultCard1details = document.querySelector("#result-card-1 > div.result-text-container > p.search-card-details");
+const resultCard1stats = document.querySelector("#result-card-1 > div.result-text-container > p.search-card-stat");
+
+const resultCard2img = document.querySelector("#result-card-2 > div.result-img-container > img");
+const resultCard2title = document.querySelector("#result-card-2 > div.result-text-container > p.search-card-title");
+const resultCard2details = document.querySelector("#result-card-2 > div.result-text-container > p.search-card-details");
+const resultCard2stats = document.querySelector("#result-card-2 > div.result-text-container > p.search-card-stat");
+
+const resultCard3img = document.querySelector("#result-card-3 > div.result-img-container > img");
+const resultCard3title = document.querySelector("#result-card-3 > div.result-text-container > p.search-card-title");
+const resultCard3details = document.querySelector("#result-card-3 > div.result-text-container > p.search-card-details");
+const resultCard3stats = document.querySelector("#result-card-3 > div.result-text-container > p.search-card-stat");
+
+const resultCard4img = document.querySelector("#result-card-4 > div.result-img-container > img");
+const resultCard4title = document.querySelector("#result-card-4 > div.result-text-container > p.search-card-title");
+const resultCard4details = document.querySelector("#result-card-4 > div.result-text-container > p.search-card-details");
+const resultCard4stats = document.querySelector("#result-card-4 > div.result-text-container > p.search-card-stat");
+
+const resultCard5img = document.querySelector("#result-card-5 > div.result-img-container > img");
+const resultCard5title = document.querySelector("#result-card-5 > div.result-text-container > p.search-card-title");
+const resultCard5details = document.querySelector("#result-card-5 > div.result-text-container > p.search-card-details");
+const resultCard5stats = document.querySelector("#result-card-5 > div.result-text-container > p.search-card-stat");
+
+const resultCard6img = document.querySelector("#result-card-6 > div.result-img-container > img");
+const resultCard6title = document.querySelector("#result-card-6 > div.result-text-container > p.search-card-title");
+const resultCard6details = document.querySelector("#result-card-6 > div.result-text-container > p.search-card-details");
+const resultCard6stats = document.querySelector("#result-card-6 > div.result-text-container > p.search-card-stat");
+
+const resultCard7img = document.querySelector("#result-card-7 > div.result-img-container > img");
+const resultCard7title = document.querySelector("#result-card-7 > div.result-text-container > p.search-card-title");
+const resultCard7details = document.querySelector("#result-card-7 > div.result-text-container > p.search-card-details");
+const resultCard7stats = document.querySelector("#result-card-7 > div.result-text-container > p.search-card-stat");
+
+const setResults = (results, lowBound, upBound) => {
+        let currResults = results.slice(lowBound,upBound);
+        console.log(results);
+        resultCard0img.src = currResults[0].card_images[0].image_url;
+        resultCard0title.textContent = currResults[0].name;
+        resultCard0details.textContent = `★${currResults[0].level} [${currResults[0].race}] ${currResults[0].attribute}`;
+        resultCard0stats.textContent = `ATK/${currResults[0].atk} DEF/${currResults[0].def}`;
+
+        resultCard1img.src = currResults[1].card_images[0].image_url;
+        resultCard1title.textContent = currResults[1].name;
+        resultCard1details.textContent = `★${currResults[1].level} [${currResults[1].race}] ${currResults[1].attribute}`;
+        resultCard1stats.textContent = `ATK/${currResults[1].atk} DEF/${currResults[1].def}`;
+        resultCard2img.src = currResults[2].card_images[0].image_url;
+        resultCard2title.textContent = currResults[2].name;
+        resultCard2details.textContent = `★${currResults[2].level} [${currResults[2].race}] ${currResults[2].attribute}`;
+        resultCard2stats.textContent = `ATK/${currResults[2].atk} DEF/${currResults[2].def}`;
+
+        resultCard3img.src = currResults[3].card_images[0].image_url;
+        resultCard3title.textContent = currResults[3].name;
+        resultCard3details.textContent = `★${currResults[3].level} [${currResults[3].race}] ${currResults[3].attribute}`;
+        resultCard3stats.textContent = `ATK/${currResults[3].atk} DEF/${currResults[3].def}`;
+
+        resultCard4img.src = currResults[4].card_images[0].image_url;
+        resultCard4title.textContent = currResults[4].name;
+        resultCard4details.textContent = `★${currResults[4].level} [${currResults[4].race}] ${currResults[4].attribute}`;
+        resultCard4stats.textContent = `ATK/${currResults[4].atk} DEF/${currResults[4].def}`;
+
+        resultCard5img.src = currResults[5].card_images[0].image_url;
+        resultCard5title.textContent = currResults[5].name;
+        resultCard5details.textContent = `★${currResults[5].level} [${currResults[5].race}] ${currResults[5].attribute}`;
+        resultCard5stats.textContent = `ATK/${currResults[5].atk} DEF/${currResults[5].def}`;
+
+        resultCard6img.src = currResults[6].card_images[0].image_url;
+        resultCard6title.textContent = currResults[6].name;
+        resultCard6details.textContent = `★${currResults[6].level} [${currResults[6].race}] ${currResults[6].attribute}`;
+        resultCard6stats.textContent = `ATK/${currResults[6].atk} DEF/${currResults[6].def}`;
+
+        resultCard7img.src = currResults[7].card_images[0].image_url;
+        resultCard7title.textContent = currResults[7].name;
+        resultCard7details.textContent = `★${currResults[7].level} [${currResults[7].race}] ${currResults[7].attribute}`;
+        resultCard6stats.textContent = `ATK/${currResults[7].atk} DEF/${currResults[7].def}`;
+}
+
 searchBar.addEventListener('submit', async (event) => {
+
     event.preventDefault();
-    let results = [];
+    results.length = 0; //empty array
     const searchParam = searchBar['card-name'].value;
     if (searchParam != ''){ 
         results = await fetchSearch(searchParam.toLowerCase());
-
-
+        totalPages = Math.ceil(results.length/8);
+        currPage = 1;
+        let lowBound = 8*(currPage - 1);
+        let upBound = (8*currPage); 
+        setResults(results, lowBound, upBound);
     }
     else {
         return alert('Invalid input!');
@@ -463,7 +550,6 @@ mainDeckBuilder.addEventListener('dragover', (e) => {
 })
 
 mainDeckBuilder.addEventListener('drop', () => {
-    console.log('dropped')
     if (isDragging) {
         mainDeck.push(mainDeck[0])
         renderDeck()
@@ -479,7 +565,6 @@ extraDeckBuilder.addEventListener('dragover', (e) => {
 })
 
 extraDeckBuilder.addEventListener('drop', () => {
-    console.log('dropped')
     if (isDragging && extraDeck.length < 15) {
         extraDeck.push(extraDeck[0])
         renderDeck()
@@ -495,7 +580,6 @@ sideDeckBuilder.addEventListener('dragover', (e) => {
 })
 
 sideDeckBuilder.addEventListener('drop', () => {
-    console.log('dropped')
     if (isDragging && sideDeck.length < 15) {
         sideDeck.push(sideDeck[0])
         renderDeck()
