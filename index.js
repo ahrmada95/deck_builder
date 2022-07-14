@@ -11,8 +11,9 @@ class Card {
     race; //race of card, for spell/trap this describes the type of spell/trap they are 
     attribute = undefined; //attribute, does not apply to spell/trap
     imageUrl;// image url to grab from site, NOT FROM GOOGLE SERVER, else blacklist
-    constructor(cardId, name, type, desc, atk, def, level, race, attribute, imageUrl) {
-        this.cardId = cardId; this.name = name; this.type = type; this.desc = desc; this.atk = atk; this.def = def; this.level = level; this.race = race; this.attribute = attribute; this.imageUrl = imageUrl;
+    owned;
+    constructor(cardId, name, type, desc, atk, def, level, race, attribute, imageUrl, owned) {
+        this.cardId = cardId; this.name = name; this.type = type; this.desc = desc; this.atk = atk; this.def = def; this.level = level; this.race = race; this.attribute = attribute; this.imageUrl = imageUrl, this.owned = owned;
     }
 }
 
@@ -22,6 +23,10 @@ let mainDeck = []; //empty array to hold main deck
 let extraDeck = []; //empty array to hold extra deck
 let sideDeck = []; //empty array to hold side deck
 let listDecks = []; //empty array to hold the list of deck names from db, will use to fill form options
+//card currently held in the card viewer
+let displayCard = {deckName: '', obj: ''};
+let deckValue;
+let ownedValue;
 
 //get urls for Yu-Gi-Oh! Prodeck API
 const apiBaseUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?';
@@ -43,6 +48,7 @@ const deckForm = document.querySelector('#deck-form');
 const cardMarketPrice = document.querySelector('#cardmarket-price');
 const tcgPlayerPrice = document.querySelector('#tcgplayer-price');
 const ebayPrice = document.querySelector('#ebay-price');
+const ownedBtn = document.querySelector("#selected-card-info > button"); 
 
 //API CALL: fetch request to search by card's name
 const fetchByName = async (cardName) => {
@@ -130,6 +136,8 @@ const renderMainDeck = () => {
             tempCard.remove()
         })
         tempCard.addEventListener('click', async () => {
+            displayCard.deck = 'mainDeck';
+            displayCard.obj = something;
             cardViewImg.src = tempCard.src
             if (something.type === "Spell Card" || something.type === "Trap Card") {
                 cardStats.textContent = ''
@@ -145,6 +153,14 @@ const renderMainDeck = () => {
             cardMarketPrice.textContent= `Cardmarket: $${prices[0]}`;
             tcgPlayerPrice.textContent= `TCG Player: $${prices[1]}`;
             ebayPrice.textContent= `Ebay:$${prices[2]}`;
+            if(something.owned === true){
+                ownedBtn.style.backgroundColor = '#007500';
+                ownedBtn.textContent = 'Owned';
+            }
+            else{
+                ownedBtn.style.backgroundColor = '#ff0000';
+                ownedBtn.textContent = 'Not Owned';
+            }
         })
         tempCard.classList.add('builder-img');
         tempCard.src = something['imageUrl'];
@@ -164,6 +180,8 @@ const renderExtraDeck = () => {
             tempCard.remove()
         })
         tempCard.addEventListener('click', async () => {
+            displayCard.deck = 'extraDeck';
+            displayCard.obj = something;
             cardViewImg.src = tempCard.src
             if (something.type === "Spell Card" || something.type === "Trap Card") {
                 cardStats.textContent = ''
@@ -179,7 +197,16 @@ const renderExtraDeck = () => {
             cardMarketPrice.textContent= `Cardmarket: $${prices[0]}`;
             tcgPlayerPrice.textContent= `TCG Player: $${prices[1]}`;
             ebayPrice.textContent= `Ebay:$${prices[2]}`;
+            if(something.owned === true){
+                ownedBtn.style.backgroundColor = '#007500';
+                ownedBtn.textContent = 'Owned';
+            }
+            else{
+                ownedBtn.style.backgroundColor = '#ff0000';
+                ownedBtn.textContent = 'Not Owned';
+            }
         })
+
         tempCard.classList.add('builder-img');
         tempCard.src = something['imageUrl'];
         extraDeckBuilder.append(tempCard);
@@ -197,6 +224,8 @@ const renderSideDeck = () => {
             tempCard.remove()
         })
         tempCard.addEventListener('click', async () => {
+            displayCard.deck = 'sideDeck';
+            displayCard.obj = something;
             cardViewImg.src = tempCard.src
             if (something.type === "Spell Card" || something.type === "Trap Card") {
                 cardStats.textContent = ''
@@ -212,6 +241,14 @@ const renderSideDeck = () => {
             cardMarketPrice.textContent= `Cardmarket: $${prices[0]}`;
             tcgPlayerPrice.textContent= `TCG Player: $${prices[1]}`;
             ebayPrice.textContent= `Ebay:$${prices[2]}`;
+            if(something.owned === true){
+                ownedBtn.style.backgroundColor = '#007500';
+                ownedBtn.textContent = 'Owned';
+            }
+            else{
+                ownedBtn.style.backgroundColor = '#ff0000';
+                ownedBtn.textContent = 'Not Owned';
+            }
         })
         tempCard.classList.add('builder-img');
         tempCard.src = something['imageUrl'];
@@ -301,6 +338,35 @@ deckForm.addEventListener('change', () => {
     populateDecks(() => {});
 })
 
+ownedBtn.addEventListener('click', () => {
+    if(ownedBtn.textContent === 'Not Owned') {
+        ownedBtn.style.backgroundColor = '#007500';
+        ownedBtn.textContent = 'Owned';
+    }
+    else {
+        ownedBtn.style.backgroundColor = '#ff0000';
+        ownedBtn.textContent = 'Not Owned';
+    }
+    switch(displayCard.deck) {
+        case "mainDeck": {
+            const ind = mainDeck.indexOf(displayCard.obj);
+            mainDeck[ind].owned = !mainDeck[ind].owned;
+            break;
+        }
+        case "extraDeck": {
+            const ind = extraDeck.indexOf(displayCard.obj);
+            extraDeck[ind].owned = !extraDeck[ind].owned;
+            break;
+        }
+        case "sideDeck": {
+            const ind = sideDeck.indexOf(displayCard.obj);
+            sideDeck[ind].owned = !sideDeck[ind].owned;
+            break;
+        }
+        default: console.log("reached end of switch - something went wrong");
+    }
+})
+
 const updateDeckSelector = async () => {
     const options = await fetchListDecks();
     deckForm.innerHTML = `
@@ -319,8 +385,8 @@ const updateDeckSelector = async () => {
     })
 }
 
+
+
 populateDecks(initalizeDeck);
 
-
-// testCardView(80896940);
 
