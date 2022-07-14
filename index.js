@@ -32,6 +32,7 @@ let numCardsOwned = 0;
 const apiBaseUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?';
 const urlCardName = `${apiBaseUrl}name=`;
 const urlCardId = `${apiBaseUrl}id=`;
+const urlSearch = `${apiBaseUrl}fname=`;
 const baseUrlImg = 'https://ygoprodeck.com/pics/';
 const decksUrl = 'http://localhost:3000/decks';
 
@@ -50,6 +51,14 @@ const tcgPlayerPrice = document.querySelector('#tcgplayer-price');
 const ebayPrice = document.querySelector('#ebay-price');
 const ownedBtn = document.querySelector("#selected-card-info > button"); 
 const searchBar = document.querySelector('#card-search-bar');
+const resultCard0 = document.querySelector('#result-card-0');
+const resultCard1 = document.querySelector('#result-card-1');
+const resultCard2 = document.querySelector('#result-card-2');
+const resultCard3 = document.querySelector('#result-card-3');
+const resultCard4 = document.querySelector('#result-card-4');
+const resultCard5 = document.querySelector('#result-card-5');
+const resultCard6 = document.querySelector('#result-card-6');
+const resultCard7 = document.querySelector('#result-card-7');
 
 //API CALL: fetch request to search by card's name
 const fetchByName = async (cardName) => {
@@ -73,7 +82,7 @@ const fetchById = async (cardId) => {
 
 const fetchSearch = async(cardName) => {
     //request form api
-    let req = await fetch(`${urlCardId}${cardId}`);
+    let req = await fetch(`${urlSearch}${cardName}`);
     //get response back as json
     let res = await req.json();
     //return response, JUST THE CARD INFORMATION
@@ -425,9 +434,15 @@ const updateDeckSelector = async () => {
 
 searchBar.addEventListener('submit', async (event) => {
     event.preventDefault();
+    let results = [];
     const searchParam = searchBar['card-name'].value;
     if (searchParam != ''){ 
-        let isDragging = false;
+        results = await fetchSearch(searchParam.toLowerCase());
+
+
+    }
+    else {
+        return alert('Invalid input!');
     }
 })
 
