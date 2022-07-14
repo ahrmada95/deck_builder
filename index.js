@@ -40,6 +40,9 @@ const cardViewAttributes = document.querySelector('#select-card-attributes');
 const cardStats = document.querySelector('#select-card-stats');
 const cardEffects = document.querySelector('#select-card-effects');
 const deckForm = document.querySelector('#deck-form');
+const cardMarketPrice = document.querySelector('#cardmarket-price');
+const tcgPlayerPrice = document.querySelector('#tcgplayer-price');
+const ebayPrice = document.querySelector('#ebay-price');
 
 //API CALL: fetch request to search by card's name
 const fetchByName = async (cardName) => {
@@ -93,8 +96,13 @@ const populateDecks = async (foo) => {
     renderExtraDeck();
     renderSideDeck();
 
-    const sortedDeck = sortDeck(mainDeck);
-    console.log(sortedDeck);   
+    const sortedDeck = sortDeck(mainDeck); 
+}
+
+const getPrices = async (cardId) => {
+    let cardInfo = await fetchById(cardId);
+    let prices = [cardInfo.card_prices[0].cardmarket_price, cardInfo.card_prices[0].tcgplayer_price, cardInfo.card_prices[0].ebay_price]
+    return prices;
 }
 
 //render main deck
@@ -121,7 +129,7 @@ const renderMainDeck = () => {
             mainDeck.splice(mainDeck.indexOf(something), 1)
             tempCard.remove()
         })
-        tempCard.addEventListener('click', () => {
+        tempCard.addEventListener('click', async () => {
             cardViewImg.src = tempCard.src
             if (something.type === "Spell Card" || something.type === "Trap Card") {
                 cardStats.textContent = ''
@@ -133,6 +141,10 @@ const renderMainDeck = () => {
             cardViewName.textContent = something.name
             cardViewAttributes.textContent = `[${something.race}/${something.type.split(' ')[0]}]`
             cardEffects.textContent = something.desc
+            let prices = await getPrices(something.cardId);
+            cardMarketPrice.textContent= `Cardmarket: $${prices[0]}`;
+            tcgPlayerPrice.textContent= `TCG Player: $${prices[1]}`;
+            ebayPrice.textContent= `Ebay:$${prices[2]}`;
         })
         tempCard.classList.add('builder-img');
         tempCard.src = something['imageUrl'];
@@ -151,7 +163,7 @@ const renderExtraDeck = () => {
             extraDeck.splice(extraDeck.indexOf(something), 1)
             tempCard.remove()
         })
-        tempCard.addEventListener('click', () => {
+        tempCard.addEventListener('click', async () => {
             cardViewImg.src = tempCard.src
             if (something.type === "Spell Card" || something.type === "Trap Card") {
                 cardStats.textContent = ''
@@ -163,6 +175,10 @@ const renderExtraDeck = () => {
             cardViewName.textContent = something.name
             cardViewAttributes.textContent = `[${something.race}/${something.type.split(' ')[0]}]`
             cardEffects.textContent = something.desc
+            let prices = await getPrices(something.cardId);
+            cardMarketPrice.textContent= `Cardmarket: $${prices[0]}`;
+            tcgPlayerPrice.textContent= `TCG Player: $${prices[1]}`;
+            ebayPrice.textContent= `Ebay:$${prices[2]}`;
         })
         tempCard.classList.add('builder-img');
         tempCard.src = something['imageUrl'];
@@ -180,7 +196,7 @@ const renderSideDeck = () => {
             sideDeck.splice(sideDeck.indexOf(something), 1)
             tempCard.remove()
         })
-        tempCard.addEventListener('click', () => {
+        tempCard.addEventListener('click', async () => {
             cardViewImg.src = tempCard.src
             if (something.type === "Spell Card" || something.type === "Trap Card") {
                 cardStats.textContent = ''
@@ -192,6 +208,10 @@ const renderSideDeck = () => {
             cardViewName.textContent = something.name
             cardViewAttributes.textContent = `[${something.race}/${something.type.split(' ')[0]}]`
             cardEffects.textContent = something.desc
+            let prices = await getPrices(something.cardId);
+            cardMarketPrice.textContent= `Cardmarket: $${prices[0]}`;
+            tcgPlayerPrice.textContent= `TCG Player: $${prices[1]}`;
+            ebayPrice.textContent= `Ebay:$${prices[2]}`;
         })
         tempCard.classList.add('builder-img');
         tempCard.src = something['imageUrl'];
@@ -234,6 +254,7 @@ const sortDeck = (unsortedDeck) => {
         }
     })
 
+    //alpa comparator
     const compareCard = (a,b) => {
         if (a.name < b.name) {
             return -1;
@@ -244,7 +265,7 @@ const sortDeck = (unsortedDeck) => {
         }
     }
 
-    //sort each array 
+    //sort each array by alpha
     linkMonArray.sort(compareCard);
     xyzMonArray.sort(compareCard);
     synchroMonArray.sort(compareCard);
@@ -252,6 +273,7 @@ const sortDeck = (unsortedDeck) => {
     monArray.sort(compareCard);
     spellArray.sort(compareCard);
     trapArray.sort(compareCard);
+    //return combined array
     return [...linkMonArray, ...xyzMonArray, ...synchroMonArray, ...fusionMonArray, ...monArray, ...spellArray, ...trapArray];
 }
 
