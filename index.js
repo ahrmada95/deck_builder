@@ -516,7 +516,6 @@ const setResults = (results, lowBound, upBound) => {
 }
 
 searchBar.addEventListener('submit', async (event) => {
-
     event.preventDefault();
     results.length = 0; //empty array
     const searchParam = searchBar['card-name'].value;
@@ -530,6 +529,30 @@ searchBar.addEventListener('submit', async (event) => {
     }
     else {
         return alert('Invalid input!');
+    }
+})
+
+prevBtn.addEventListener('click', async(event) => {
+    if(currPage > 1){
+        currPage--;
+        let lowBound = 8*(currPage - 1);
+        let upBound = (8*currPage);
+        setResults(results, lowBound, upBound);
+    }
+    else {
+        alert('You are the first page of results!')
+    }
+})
+
+nextBtn.addEventListener('click', async(event) => {
+    if(currPage < totalPages){
+        currPage++;
+        let lowBound = 8*(currPage - 1);
+        let upBound = (8*currPage);
+        setResults(results, lowBound, upBound);
+    }
+    else {
+        alert('You are the last page of results!')
     }
 })
 
