@@ -136,6 +136,9 @@ const renderMainDeck = () => {
         }
         tempCard.addEventListener('contextmenu', (e) => {
             numCards--;
+            if(something.owned === true) {
+                numCardsOwned--;
+            }
             e.preventDefault()
             mainDeck.splice(mainDeck.indexOf(something), 1)
             tempCard.remove()
@@ -184,7 +187,10 @@ const renderExtraDeck = () => {
         }
         let tempCard = document.createElement('img');
         tempCard.addEventListener('contextmenu',(e) => {   
-            numCards--; 
+            numCards--;
+            if(something.owned === true) {
+                numCardsOwned--;
+            }
             e.preventDefault()
             extraDeck.splice(extraDeck.indexOf(something), 1)
             tempCard.remove()
@@ -234,6 +240,9 @@ const renderSideDeck = () => {
         let tempCard = document.createElement('img');
         tempCard.addEventListener('contextmenu', (e) => {
             numCards--;
+            if(something.owned === true) {
+                numCardsOwned--;
+            }
             e.preventDefault()
             sideDeck.splice(sideDeck.indexOf(something), 1)
             tempCard.remove()
