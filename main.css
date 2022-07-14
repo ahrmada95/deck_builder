@@ -201,6 +201,7 @@ body {
 }
 
 .main-deck-banner > .main-deck-details {
+    background-image: linear-gradient(to right, #313d4d, #25303d, #1a242d, #11181e, #01090e);
     height: 100%;
     flex-grow: 1;
     justify-content: flex-end;
@@ -236,9 +237,6 @@ body {
     grid-template-rows: repeat(6,1fr); /*you will adjust these to scale with deck size*/
 }
 
-.main-deck-builder > .main-deck-spot {
-    background-color: rgba(61, 5, 5, 0.25);
-} 
 
 .deck-builder > .extra-deck {
     width: 100%; /*100% of deckbuilder window*/
@@ -276,6 +274,7 @@ body {
 }
 
 .extra-deck-banner > .extra-deck-details {
+    background-image: linear-gradient(to right, #313d4d, #25303d, #1a242d, #11181e, #01090e);
     height: 100%;
     flex-grow: 1;
     justify-content: flex-end;
@@ -288,10 +287,6 @@ body {
     grid-template-columns: repeat(15,1fr); /*you will adjust these to scale with deck size*/
     column-gap: 0.25vh;
     row-gap: 0.25vh;
-}
-
-.extra-deck-builder > .extra-deck-spot {
-    background-color: rgba(7, 7, 46, 0.25);
 }
 
 .deck-builder > .side-deck {
@@ -330,6 +325,7 @@ body {
 }
 
 .side-deck-banner > .side-deck-details {
+    background-image: linear-gradient(to right, #313d4d, #25303d, #1a242d, #11181e, #01090e);
     height: 100%;
     flex-grow: 1;
     justify-content: flex-end;
@@ -345,9 +341,6 @@ body {
     row-gap: 0.25vh;
 }
 
-.side-deck-builder > .side-deck-spot {
-    background-color: rgba(5, 43, 5, 0.25);
-}
 
 .application > .card-applications {
     background-image: linear-gradient(to right, #01090e, #051219, #081922, #081f2c, #062537, #062537, #062537, #062537, #081f2c, #081922, #051219, #01090e);
@@ -433,7 +426,7 @@ body {
 }
 
 .card-searcher > #card-search-banner {
-    background-color: rgb(49, 61, 77);
+    background-image: linear-gradient(to left, #313d4d, #25303d, #1a242d, #11181e, #01090e);
     display: flex;
     flex: 1 0 0;
     padding-left: 10%;
@@ -492,8 +485,4 @@ body {
     row-gap: 0.25vh;
 }
 
-#card-search-spot {
-    background-color: rgba(138, 43, 226, 0.1);
-
-}
 
