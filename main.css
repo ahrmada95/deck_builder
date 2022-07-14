@@ -1,77 +1,5 @@
-body {
-    background-color: white;
-}
-
-#container {
-    background-color: lightcoral;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.deck-builder {
-    display: grid;
-    background-color: black;
-    /* margin-top: 50px; */
-    width: auto;
-    height: auto;  
-}
-
-#main-deck{
-    grid-template-columns: repeat(10, 1fr);
-}
-
-#extra-deck {
-    grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: 1fr;
-    background-color: purple;
-}
-
-#side-deck {
-    grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: 1fr;
-    background-color: orange;
-}
-
-.deck-builder-img {
-    margin: 1px;
-    width: 80px;
-}
-
-.deck-builder-img:hover {
-    filter:brightness(150%);
-    cursor: pointer;
-}
-
-.extra-deck-img {
-    margin: 1px;
-    width: 54.5px;
-}
-
-.extra-deck-img:hover {
-    filter:brightness(150%);
-}
-
-.search-bar {
-    display: inline;
-    position:relative;
-    top: 5px;
-    /* margin: auto; */
-}
-
-#card-viewer {
-    background-color: gray;
-    width: 500px;
-    text-align: left;
-}
-#card-viewer-img {
-    display: flex;
-    margin: auto;
-    width: 200px;
-}
-
 @font-face {
+
     font-family: title-text;
     src: url("./assets/fonts/Yu-Gi-Oh! Matrix Regular Small Caps 1.ttf");
 }
@@ -83,7 +11,6 @@ body {
     font-family: stats-text;
     src: url("./assets/fonts/Yu-Gi-Oh!\ Matrix\ Regular\ Small\ Caps\ 2.ttf");
 }
-
 @font-face {
     font-family: properties-text;
     src: url("./assets/fonts/Yu-Gi-Oh!\ ITC\ Stone\ Serif\ Small\ Caps\ Bold.ttf");
@@ -93,42 +20,480 @@ body {
     font-family: title-text;
 }
 
-#card-name {
-    display: block;
-    text-align: center;
+.button {
+    border-radius: 0;
+    color: #FFFFFF;
+    font-family: effect-text;
+    font-size: auto;
+    font-weight: 100;
+    background-color: #6284AB;
+    border: solid #FFFFFF 1px;
+    cursor: pointer;
+    height: 50%;
+    width: 15%;
+    margin-left: 10%;
+ }
+
+ .button:hover{
+    filter:brightness(1.5)
+ }
+
+ .sort-button {
+    border-radius: 0;
+    color: #FFFFFF;
+    font-family: effect-text;
+    font-size: auto;
+    font-weight: 100;
+    background-color: #3e4042;
+    border: solid #FFFFFF 1px;
+    cursor: pointer;
+    height: 50%;
+    width: 15%;
+    margin-left: 5%;
+ }
+
+ .sort-button:hover{
+    filter:brightness(1.5)
+ }
+
+ .builder-img{
+    width: 100%; 
+ }
+
+
+
+ .builder-img:hover {
+    filter: brightness(1.4) contrast(1.4); 
+ }
+
+.builder-img-selected {
+    filter: hue-rotate(100deg) saturate(0.6);
 }
 
-.card-stats-text {
-    font-family: stats-text;
-    font-size: 20px;
+body {
+    background-color: white;
+    margin: 0;
+    width: 100vw; /*full view window*/
+    height: 100vh; /*full view window*/
+}
+
+.banner {
+    background-color: rgb(49, 61, 77);
+    width: 100vw; /*full width of window*/
+    height: 6vh; /*6% of view window height*/
+    display: flex; /*make flexbox, goated shit*/
+    flex-direction: row; /*children will be in a row*/
+    justify-content: space-between; /*evenly size children within*/
+}
+
+.banner > .deck-choice {
     display: flex;
-}
-
-#atk-def {
-    display: inline-flex;
-}
-
-#def {
+    height: 100%;
+    flex: 1 0 0;
+    flex-direction: left;
+    justify-content: flex-start;
+    align-items: center;
     padding-left: 10px;
 }
 
-.effect-text {
+#deck-form {
     font-family: effect-text;
-    display: flex;
+    font-size: 1.75vh;
+    color: white;
 }
 
-.properties-text {
-    font-family: properties-text;
+#decks {
+    font-family: effect-text;
 }
 
-#card-search-con {
+.banner > .title {
     display: flex;
-    margin: auto;
+    color: white;
+    height: 100%;
+    flex: 1 0 0;
+    font-size: 3vh;
+    align-items:center;
     justify-content: center;
 }
 
-#searcher {
-    width: 300px;
+.banner > .deck-value {
+    display: flex;
+    height: 100%;
+    flex: 1 0 0;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-right: 10px;
+    
+}
+
+.deck-value > #current-value {
+    color: white;
+    height: 50%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items:center;
+    font-family: stats-text;
+    font-size: 2.25vh;
+}
+
+.deck-value > #owned-value {
+    color: white;
+    height: 50%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: stats-text;
+    font-size: 2.25vh;
+}
+
+.application {
+    background-color: rgb(17,57,78);
+    width: 100vw; /*full width of window*/
+    height: 94vh; /*Remaining 94% of view window height*/
+    display: flex; /*make flexbox, goated shit*/
+    flex-direction: row; /*children will be in a row*/
+    justify-content: flex-start; /*children within will start from left*/
+}
+
+.application > .deck-builder {
+    background-image: linear-gradient(to right, #01090e, #051219, #081922, #081f2c, #062537, #062537, #062537, #062537, #081f2c, #081922, #051219, #01090e);
+    height: auto; /*100% of application window*/
+    display: flex; /*make flexbox, goated shit*/
+    flex-direction: column;
+    padding: 0.25vh;
+    flex: 4 0 0; /*to stop other shit from growing, we gotta stop everything from shrinking*/
+}
+
+.deck-builder > .main-deck {
+    width: 100%;
+    height: 63vh;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-deck > .main-deck-banner {
+    background-color: rgb(49, 61, 77);
+    width: 100%;
+    height: 1.5vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-deck-banner > .main-deck-tag{
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5px;
     font-family: effect-text;
+    color: white;
+    font-size: 1.75vh;
+}
+
+.main-deck-banner > .main-deck-sort{
+    height: 100%;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.main-deck-banner > .main-deck-details {
+    height: 100%;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.main-deck > .main-deck-builder {
+    width: auto;
+    height: 100%;
+    display: grid;
+    padding: 0.25vh;
+    column-gap: 0.25vh;
+    row-gap: 0.25vh;
+    overflow: auto;
+}
+
+.main-deck-builder::-webkit-scrollbar {
+    display: none;
+}
+
+
+.deck-ct-40{
+    grid-template-columns: repeat(10,1fr); /*you will adjust these to scale with deck size*/
+    grid-template-rows: repeat(4,1fr); /*you will adjust these to scale with deck size*/
+}
+
+.deck-ct-50 {
+    grid-template-columns: repeat(10,1fr); /*you will adjust these to scale with deck size*/
+    grid-template-rows: repeat(5,1fr); /*you will adjust these to scale with deck size*/
+}
+
+.deck-ct-60 {
+    grid-template-columns: repeat(10,1fr); /*you will adjust these to scale with deck size*/
+    grid-template-rows: repeat(6,1fr); /*you will adjust these to scale with deck size*/
+}
+
+.main-deck-builder > .main-deck-spot {
+    background-color: rgba(61, 5, 5, 0.25);
+} 
+
+.deck-builder > .extra-deck {
+    width: 100%; /*100% of deckbuilder window*/
+    height: 15vh;
+    margin-top: 0.25vh;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.extra-deck > .extra-deck-banner {
+    background-color: rgb(49, 61, 77);
+    width: 100%;
+    height: 1.5vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.extra-deck-banner > .extra-deck-tag{
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5px;
+    font-family: effect-text;
+    color: white;
+    font-size: 1.75vh;
+}
+
+.extra-deck-banner > .extra-deck-sort{
+    height: 100%;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.extra-deck-banner > .extra-deck-details {
+    height: 100%;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.extra-deck > .extra-deck-builder {
+    height: 6.5vw;
+    display: grid;
+    padding: 0.25vh;
+    grid-template-columns: repeat(15,1fr); /*you will adjust these to scale with deck size*/
+    column-gap: 0.25vh;
+    row-gap: 0.25vh;
+}
+
+.extra-deck-builder > .extra-deck-spot {
+    background-color: rgba(7, 7, 46, 0.25);
+}
+
+.deck-builder > .side-deck {
+    width: 100%; /*100% of deckbuilder window*/
+    height: 15vh;
+    margin-top: 0.25vh;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-deck >.side-deck-banner {
+    background-color: rgb(49, 61, 77);
+    width: 100%;
+    height: 1.5vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.side-deck-banner > .side-deck-tag{
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5px;
+    font-family: effect-text;
+    color: white;
+    font-size: 1.75vh;
+}
+
+.side-deck-banner > .side-deck-sort{
+    height: 100%;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.side-deck-banner > .side-deck-details {
+    height: 100%;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.side-deck > .side-deck-builder {
+    width: auto;
+    height: 6.5vw;
+    display: grid;
+    padding: 0.25vh;
+    grid-template-columns: repeat(15,1fr); /*you will adjust these to scale with deck size*/
+    column-gap: 0.25vh;
+    row-gap: 0.25vh;
+}
+
+.side-deck-builder > .side-deck-spot {
+    background-color: rgba(5, 43, 5, 0.25);
+}
+
+.application > .card-applications {
+    background-image: linear-gradient(to right, #01090e, #051219, #081922, #081f2c, #062537, #062537, #062537, #062537, #081f2c, #081922, #051219, #01090e);
+    flex: 3 0 0;
+    height: auto;
+    display: flex;
+    padding: 0.25vh;
+    flex-direction: column;
+}
+
+.card-applications > .card-viewer {
+    width: 100%;
+    height: 25vw;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-viewer > #selected-card {
+    height: 100%;
+    display: flex;
+    flex: 2 0 0;
+    padding: 0.5vh;
+}
+
+#selected-card > #selected-card-img {
+    display: flex;
+    margin-bottom: auto;
+    width: 100%; 
+}
+
+.card-viewer > #selected-card-details {
+    height: 100%;
+    color: rgb(198, 203, 209);
+    display: flex;
+    flex: 5 0 0;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: top;
+}
+
+#selected-card-details > #select-card-name {
+    font-family: title-text;
+    position: relative;
+    flex: 1 0 0;
+    font-size: 3vh;
+}
+
+#selected-card-details > #select-card-attributes {
+    font-family: properties-text;
+    position: relative;
+    font-size: 1.30vh;
+    flex: 1 0 0;
+    margin-bottom: 0.5vh;
+}
+
+#selected-card-details > #select-card-stats {
+    font-family: stats-text;
+    position: relative;
+    font-size: 2vh;
+    flex: 1 0 0;
+    margin-bottom: 0.5vh;
+}
+
+#selected-card-details > #select-card-effects {
+    font-family: effect-text;
+    font-size: 1.4vh;
+    flex: 20 0 0;
+    overflow: auto;
+}
+
+#select-card-effects::-webkit-scrollbar {
+    display: none;
+  }  
+
+.card-applications > .card-searcher {
+    width: 100%;
+    height: 50vh;
+    margin-top: 0.25vh;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-searcher > #card-search-banner {
+    background-color: rgb(49, 61, 77);
+    display: flex;
+    flex: 1 0 0;
+    padding-left: 10%;
+}
+
+
+#card-search-bar > label {
+    display: flex;
+    align-self: center;
+    font-family: effect-text;
+    font-size: 1.75vh;
+    margin-right: 1vw;
+    color: white;
+}
+#card-search-bar {
+    display: flex;
+    height:65%;
+    width: 80%;
+    align-self: center;
+    text-align: center;
+}
+
+#card-name {
+    font-family: effect-text;
+    font-size: 1.75vh;
+    width: 55%;
+}
+
+.search-button {
+    border-radius: 0;
+    color: #FFFFFF;
+    font-family: effect-text;
+    font-size: auto;
+    font-weight: 100;
+    background-color: #6284AB;
+    border: solid #FFFFFF 1px;
+    cursor: pointer;
+    height: 90%;
+    width: 15%;
+    margin-left: 4%;
+    text-align: center;
+    align-self: center;
+ }
+
+ .search-button:hover{
+    filter:brightness(1.5)
+ }
+
+
+.card-searcher > #card-search-results {
+    flex: 10 0 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr); /*you will adjust these to scale with deck size*/
+    grid-template-rows: repeat(5,1fr); /*you will adjust these to scale with deck size*/
+    column-gap: 0.25vh;
+    row-gap: 0.25vh;
+}
+
+#card-search-spot {
+    background-color: rgba(138, 43, 226, 0.1);
+
 }
 
