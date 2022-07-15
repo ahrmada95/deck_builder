@@ -456,21 +456,25 @@ const resultCard3title = document.querySelector("#result-card-3 > div.result-tex
 const resultCard3details = document.querySelector("#result-card-3 > div.result-text-container > p.search-card-details");
 const resultCard3stats = document.querySelector("#result-card-3 > div.result-text-container > p.search-card-stat");
 
+const resultCard4 = document.querySelector('#result-card-4');
 const resultCard4img = document.querySelector("#result-card-4 > div.result-img-container > img");
 const resultCard4title = document.querySelector("#result-card-4 > div.result-text-container > p.search-card-title");
 const resultCard4details = document.querySelector("#result-card-4 > div.result-text-container > p.search-card-details");
 const resultCard4stats = document.querySelector("#result-card-4 > div.result-text-container > p.search-card-stat");
 
+const resultCard5 = document.querySelector('#result-card-5');
 const resultCard5img = document.querySelector("#result-card-5 > div.result-img-container > img");
 const resultCard5title = document.querySelector("#result-card-5 > div.result-text-container > p.search-card-title");
 const resultCard5details = document.querySelector("#result-card-5 > div.result-text-container > p.search-card-details");
 const resultCard5stats = document.querySelector("#result-card-5 > div.result-text-container > p.search-card-stat");
 
+const resultCard6 = document.querySelector('#result-card-6');
 const resultCard6img = document.querySelector("#result-card-6 > div.result-img-container > img");
 const resultCard6title = document.querySelector("#result-card-6 > div.result-text-container > p.search-card-title");
 const resultCard6details = document.querySelector("#result-card-6 > div.result-text-container > p.search-card-details");
 const resultCard6stats = document.querySelector("#result-card-6 > div.result-text-container > p.search-card-stat");
 
+const resultCard7 = document.querySelector('#result-card-7');
 const resultCard7img = document.querySelector("#result-card-7 > div.result-img-container > img");
 const resultCard7title = document.querySelector("#result-card-7 > div.result-text-container > p.search-card-title");
 const resultCard7details = document.querySelector("#result-card-7 > div.result-text-container > p.search-card-details");
@@ -502,6 +506,7 @@ const setResults = (results, lowBound, upBound) => {
         resultCard4title.textContent = currResults[4].name;
         resultCard4details.textContent = `★${currResults[4].level} [${currResults[4].race}] ${currResults[4].attribute}`;
         resultCard4stats.textContent = `ATK/${currResults[4].atk} DEF/${currResults[4].def}`;
+
 
         resultCard5img.src = currResults[5].card_images[0].image_url;
         resultCard5title.textContent = currResults[5].name;
@@ -601,6 +606,200 @@ nextBtn.addEventListener('click', async(event) => {
         alert('You are the last page of results!')
     }
 })
+
+resultCard0.addEventListener('click', async(event) => {
+    if(resultCard0img.src != ''){
+        cardViewImg.src = resultCard0img.src;
+        cardViewName.textContent = resultCard0title.textContent;
+        const selectedCard = await fetchByName(resultCard0title.textContent);
+        console.log(selectedCard.id);
+        cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
+        cardEffects.textContent = selectedCard.desc;
+        let prices = await getPrices(selectedCard.id);
+        cardMarketPrice.textContent= `Cardmarket: $${prices[0]}`;
+        tcgPlayerPrice.textContent= `TCG Player: $${prices[1]}`;
+        ebayPrice.textContent= `Ebay:$${prices[2]}`;
+        if (selectedCard.type === "Spell Card" || selectedCard.type === "Trap Card") {
+            cardStats.textContent = ''
+        } else if (selectedCard.type === "Link Monster") {
+            cardStats.textContent = `ATK/${selectedCard.atk}`
+        } else {
+            cardStats.textContent = `ATK/${selectedCard.atk} DEF/${selectedCard.def}`
+        }
+        ownedBtn.style.backgroundColor = '#ff0000';
+        ownedBtn.textContent = 'Not Owned';
+    }
+})
+
+resultCard1.addEventListener('click', async(event) => {
+    if(resultCard1img.src != ''){
+        cardViewImg.src = resultCard1img.src;
+        cardViewName.textContent = resultCard1title.textContent;
+        const selectedCard = await fetchByName(resultCard1title.textContent);
+        console.log(selectedCard.id);
+        cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
+        cardEffects.textContent = selectedCard.desc;
+        let prices = await getPrices(selectedCard.id);
+        cardMarketPrice.textContent= `Cardmarket: $${prices[0]}`;
+        tcgPlayerPrice.textContent= `TCG Player: $${prices[1]}`;
+        ebayPrice.textContent= `Ebay:$${prices[2]}`;
+        if (selectedCard.type === "Spell Card" || selectedCard.type === "Trap Card") {
+            cardStats.textContent = ''
+        } else if (selectedCard.type === "Link Monster") {
+            cardStats.textContent = `ATK/${selectedCard.atk}`
+        } else {
+            cardStats.textContent = `ATK/${selectedCard.atk} DEF/${selectedCard.def}`
+        }
+        ownedBtn.style.backgroundColor = '#ff0000';
+        ownedBtn.textContent = 'Not Owned';
+    }
+})
+
+resultCard2.addEventListener('click', async(event) => {
+    if(resultCard2img.src != ''){
+        cardViewImg.src = resultCard2img.src;
+        cardViewName.textContent = resultCard2title.textContent;
+        const selectedCard = await fetchByName(resultCard2title.textContent);
+        console.log(selectedCard.id);
+        cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
+        cardEffects.textContent = selectedCard.desc;
+        let prices = await getPrices(selectedCard.id);
+        cardMarketPrice.textContent= `Cardmarket: $${prices[0]}`;
+        tcgPlayerPrice.textContent= `TCG Player: $${prices[1]}`;
+        ebayPrice.textContent= `Ebay:$${prices[2]}`;
+        if (selectedCard.type === "Spell Card" || selectedCard.type === "Trap Card") {
+            cardStats.textContent = ''
+        } else if (selectedCard.type === "Link Monster") {
+            cardStats.textContent = `ATK/${selectedCard.atk}`
+        } else {
+            cardStats.textContent = `ATK/${selectedCard.atk} DEF/${selectedCard.def}`
+        }
+        ownedBtn.style.backgroundColor = '#ff0000';
+        ownedBtn.textContent = 'Not Owned';
+    }
+})
+
+resultCard3.addEventListener('click', async(event) => {
+    if(resultCard3img.src != ''){
+        cardViewImg.src = resultCard3img.src;
+        cardViewName.textContent = resultCard3title.textContent;
+        const selectedCard = await fetchByName(resultCard3title.textContent);
+        console.log(selectedCard.id);
+        cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
+        cardEffects.textContent = selectedCard.desc;
+        let prices = await getPrices(selectedCard.id);
+        cardMarketPrice.textContent= `Cardmarket: $${prices[0]}`;
+        tcgPlayerPrice.textContent= `TCG Player: $${prices[1]}`;
+        ebayPrice.textContent= `Ebay:$${prices[2]}`;
+        if (selectedCard.type === "Spell Card" || selectedCard.type === "Trap Card") {
+            cardStats.textContent = ''
+        } else if (selectedCard.type === "Link Monster") {
+            cardStats.textContent = `ATK/${selectedCard.atk}`
+        } else {
+            cardStats.textContent = `ATK/${selectedCard.atk} DEF/${selectedCard.def}`
+        }
+        ownedBtn.style.backgroundColor = '#ff0000';
+        ownedBtn.textContent = 'Not Owned';
+    }
+})
+
+resultCard4.addEventListener('click', async(event) => {
+    if(resultCard4img.src != ''){
+        cardViewImg.src = resultCard4img.src;
+        cardViewName.textContent = resultCard4title.textContent;
+        const selectedCard = await fetchByName(resultCard4title.textContent);
+        console.log(selectedCard.id);
+        cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
+        cardEffects.textContent = selectedCard.desc;
+        let prices = await getPrices(selectedCard.id);
+        cardMarketPrice.textContent= `Cardmarket: $${prices[0]}`;
+        tcgPlayerPrice.textContent= `TCG Player: $${prices[1]}`;
+        ebayPrice.textContent= `Ebay:$${prices[2]}`;
+        if (selectedCard.type === "Spell Card" || selectedCard.type === "Trap Card") {
+            cardStats.textContent = ''
+        } else if (selectedCard.type === "Link Monster") {
+            cardStats.textContent = `ATK/${selectedCard.atk}`
+        } else {
+            cardStats.textContent = `ATK/${selectedCard.atk} DEF/${selectedCard.def}`
+        }
+        ownedBtn.style.backgroundColor = '#ff0000';
+        ownedBtn.textContent = 'Not Owned';
+    }
+})
+
+resultCard5.addEventListener('click', async(event) => {
+    if(resultCard5img.src != ''){
+        cardViewImg.src = resultCard5img.src;
+        cardViewName.textContent = resultCard5title.textContent;
+        const selectedCard = await fetchByName(resultCard5title.textContent);
+        console.log(selectedCard.id);
+        cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
+        cardEffects.textContent = selectedCard.desc;
+        let prices = await getPrices(selectedCard.id);
+        cardMarketPrice.textContent= `Cardmarket: $${prices[0]}`;
+        tcgPlayerPrice.textContent= `TCG Player: $${prices[1]}`;
+        ebayPrice.textContent= `Ebay:$${prices[2]}`;
+        if (selectedCard.type === "Spell Card" || selectedCard.type === "Trap Card") {
+            cardStats.textContent = ''
+        } else if (selectedCard.type === "Link Monster") {
+            cardStats.textContent = `ATK/${selectedCard.atk}`
+        } else {
+            cardStats.textContent = `ATK/${selectedCard.atk} DEF/${selectedCard.def}`
+        }
+        ownedBtn.style.backgroundColor = '#ff0000';
+        ownedBtn.textContent = 'Not Owned';
+    }
+})
+
+resultCard6.addEventListener('click', async(event) => {
+    if(resultCard6img.src != ''){
+        cardViewImg.src = resultCard6img.src;
+        cardViewName.textContent = resultCard6title.textContent;
+        const selectedCard = await fetchByName(resultCard6title.textContent);
+        console.log(selectedCard.id);
+        cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
+        cardEffects.textContent = selectedCard.desc;
+        let prices = await getPrices(selectedCard.id);
+        cardMarketPrice.textContent= `Cardmarket: $${prices[0]}`;
+        tcgPlayerPrice.textContent= `TCG Player: $${prices[1]}`;
+        ebayPrice.textContent= `Ebay:$${prices[2]}`;
+        if (selectedCard.type === "Spell Card" || selectedCard.type === "Trap Card") {
+            cardStats.textContent = ''
+        } else if (selectedCard.type === "Link Monster") {
+            cardStats.textContent = `ATK/${selectedCard.atk}`
+        } else {
+            cardStats.textContent = `ATK/${selectedCard.atk} DEF/${selectedCard.def}`
+        }
+        ownedBtn.style.backgroundColor = '#ff0000';
+        ownedBtn.textContent = 'Not Owned';
+    }
+})
+
+resultCard7.addEventListener('click', async(event) => {
+    if(resultCard7img.src != ''){
+        cardViewImg.src = resultCard7img.src;
+        cardViewName.textContent = resultCard7title.textContent;
+        const selectedCard = await fetchByName(resultCard7title.textContent);
+        console.log(selectedCard.id);
+        cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
+        cardEffects.textContent = selectedCard.desc;
+        let prices = await getPrices(selectedCard.id);
+        cardMarketPrice.textContent= `Cardmarket: $${prices[0]}`;
+        tcgPlayerPrice.textContent= `TCG Player: $${prices[1]}`;
+        ebayPrice.textContent= `Ebay:$${prices[2]}`;
+        if (selectedCard.type === "Spell Card" || selectedCard.type === "Trap Card") {
+            cardStats.textContent = ''
+        } else if (selectedCard.type === "Link Monster") {
+            cardStats.textContent = `ATK/${selectedCard.atk}`
+        } else {
+            cardStats.textContent = `ATK/${selectedCard.atk} DEF/${selectedCard.def}`
+        }
+        ownedBtn.style.backgroundColor = '#ff0000';
+        ownedBtn.textContent = 'Not Owned';
+    }
+})
+
+
 
 cardViewImg.addEventListener('dragstart', (e) => {
     isDragging = true;
