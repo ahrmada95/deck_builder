@@ -432,21 +432,25 @@ const updateDeckSelector = async () => {
     })
 }
 
+const resultCard0 = document.querySelector('#result-card-0');
 const resultCard0img = document.querySelector("#result-card-0 > div.result-img-container > img");
 const resultCard0title = document.querySelector("#result-card-0 > div.result-text-container > p.search-card-title");
 const resultCard0details = document.querySelector("#result-card-0 > div.result-text-container > p.search-card-details");
 const resultCard0stats = document.querySelector("#result-card-0 > div.result-text-container > p.search-card-stat");
 
+const resultCard1 = document.querySelector('#result-card-1');
 const resultCard1img = document.querySelector("#result-card-1 > div.result-img-container > img");
 const resultCard1title = document.querySelector("#result-card-1 > div.result-text-container > p.search-card-title");
 const resultCard1details = document.querySelector("#result-card-1 > div.result-text-container > p.search-card-details");
 const resultCard1stats = document.querySelector("#result-card-1 > div.result-text-container > p.search-card-stat");
 
+const resultCard2 = document.querySelector('#result-card-2');
 const resultCard2img = document.querySelector("#result-card-2 > div.result-img-container > img");
 const resultCard2title = document.querySelector("#result-card-2 > div.result-text-container > p.search-card-title");
 const resultCard2details = document.querySelector("#result-card-2 > div.result-text-container > p.search-card-details");
 const resultCard2stats = document.querySelector("#result-card-2 > div.result-text-container > p.search-card-stat");
 
+const resultCard3 = document.querySelector('#result-card-3');
 const resultCard3img = document.querySelector("#result-card-3 > div.result-img-container > img");
 const resultCard3title = document.querySelector("#result-card-3 > div.result-text-container > p.search-card-title");
 const resultCard3details = document.querySelector("#result-card-3 > div.result-text-container > p.search-card-details");
@@ -512,12 +516,54 @@ const setResults = (results, lowBound, upBound) => {
         resultCard7img.src = currResults[7].card_images[0].image_url;
         resultCard7title.textContent = currResults[7].name;
         resultCard7details.textContent = `★${currResults[7].level} [${currResults[7].race}] ${currResults[7].attribute}`;
-        resultCard6stats.textContent = `ATK/${currResults[7].atk} DEF/${currResults[7].def}`;
+        resultCard7stats.textContent = `ATK/${currResults[7].atk} DEF/${currResults[7].def}`;
+}
+
+const clearResults = () => {
+        resultCard0img.src = "";
+        resultCard0title.textContent = "";
+        resultCard0details.textContent = "";
+        resultCard0stats.textContent = "";
+
+        resultCard1img.src = "";
+        resultCard1title.textContent = "";
+        resultCard1details.textContent = "";
+        resultCard1stats.textContent = "";
+        resultCard2img.src = "";
+        resultCard2title.textContent = "";
+        resultCard2details.textContent = "";
+        resultCard2stats.textContent = "";
+
+        resultCard3img.src = "";
+        resultCard3title.textContent = "";
+        resultCard3details.textContent = "";
+        resultCard3stats.textContent = "";
+
+        resultCard4img.src = "";
+        resultCard4title.textContent = "";
+        resultCard4details.textContent = "";
+        resultCard4stats.textContent = "";
+
+        resultCard5img.src = "";
+        resultCard5title.textContent = "";
+        resultCard5details.textContent = "";
+        resultCard5stats.textContent = "";
+
+        resultCard6img.src = "";
+        resultCard6title.textContent = "";
+        resultCard6details.textContent = "";
+        resultCard6stats.textContent = "";
+
+        resultCard7img.src = "";
+        resultCard7title.textContent = "";
+        resultCard7details.textContent = "";
+        resultCard6stats.textContent = "";
 }
 
 searchBar.addEventListener('submit', async (event) => {
     event.preventDefault();
-    results.length = 0; //empty array
+    results = []; //empty array
+    clearResults();
     const searchParam = searchBar['card-name'].value;
     if (searchParam != ''){ 
         results = await fetchSearch(searchParam.toLowerCase());
