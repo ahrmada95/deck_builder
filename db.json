@@ -115,6 +115,19 @@
           "owned": true
         },
         {
+          "cardId": 27204311,
+          "name": "Nibiru, the Primal Being",
+          "type": "Effect Monster",
+          "desc": "During the Main Phase, if your opponent Normal or Special Summoned 5 or more monsters this turn (Quick Effect): You can Tribute as many face-up monsters on the field as possible, and if you do, Special Summon this card from your hand, then Special Summon 1 \"Primal Being Token\" (Rock/LIGHT/Level 11/ATK ?/DEF ?) to your opponent's field. (This Token's ATK/DEF become the combined original ATK/DEF of the Tributed monsters.) You can only use this effect of \"Nibiru, the Primal Being\" once per turn.",
+          "atk": 3000,
+          "def": 600,
+          "level": 11,
+          "race": "Rock",
+          "attribute": "LIGHT",
+          "imageUrl": "https://storage.googleapis.com/ygoprodeck.com/pics/27204311.jpg",
+          "owned": true
+        },
+        {
           "id": 10,
           "cardId": 93490856,
           "name": "Swordsoul Strategist Longyuan",
@@ -296,6 +309,19 @@
           "owned": true
         },
         {
+          "cardId": 87052196,
+          "name": "Tenyi Spirit - Ashuna",
+          "type": "Effect Monster",
+          "desc": "If you control no Effect Monsters: You can Special Summon this card from your hand. If you control a face-up non-Effect Monster: You can banish this card from your hand or GY; Special Summon 1 \"Tenyi\" monster from your Deck, except \"Tenyi Spirit - Ashuna\", also you cannot Special Summon monsters for the rest of this turn, except Wyrm monsters. You can only use each effect of \"Tenyi Spirit - Ashuna\" once per turn.",
+          "atk": 1600,
+          "def": 2600,
+          "level": 7,
+          "race": "Wyrm",
+          "attribute": "LIGHT",
+          "imageUrl": "https://storage.googleapis.com/ygoprodeck.com/pics/87052196.jpg",
+          "owned": true
+        },
+        {
           "id": 20,
           "cardId": 24557335,
           "name": "Tenyi Spirit - Shthana",
@@ -307,6 +333,45 @@
           "race": "Wyrm",
           "attribute": "WATER",
           "imageUrl": "https://ygoprodeck.com/pics/24557335.jpg",
+          "owned": true
+        },
+        {
+          "cardId": 23431858,
+          "name": "Tenyi Spirit - Vishuda",
+          "type": "Effect Monster",
+          "desc": "If you control no Effect Monsters: You can Special Summon this card from your hand. If you control a face-up non-Effect Monster: You can banish this card from your hand or GY, then target 1 card your opponent controls; return it to the hand. You can only use each effect of \"Tenyi Spirit - Vishuda\" once per turn.",
+          "atk": 1500,
+          "def": 2500,
+          "level": 7,
+          "race": "Wyrm",
+          "attribute": "DARK",
+          "imageUrl": "https://storage.googleapis.com/ygoprodeck.com/pics/23431858.jpg",
+          "owned": true
+        },
+        {
+          "cardId": 23431858,
+          "name": "Tenyi Spirit - Vishuda",
+          "type": "Effect Monster",
+          "desc": "If you control no Effect Monsters: You can Special Summon this card from your hand. If you control a face-up non-Effect Monster: You can banish this card from your hand or GY, then target 1 card your opponent controls; return it to the hand. You can only use each effect of \"Tenyi Spirit - Vishuda\" once per turn.",
+          "atk": 1500,
+          "def": 2500,
+          "level": 7,
+          "race": "Wyrm",
+          "attribute": "DARK",
+          "imageUrl": "https://storage.googleapis.com/ygoprodeck.com/pics/23431858.jpg",
+          "owned": true
+        },
+        {
+          "cardId": 23431858,
+          "name": "Tenyi Spirit - Vishuda",
+          "type": "Effect Monster",
+          "desc": "If you control no Effect Monsters: You can Special Summon this card from your hand. If you control a face-up non-Effect Monster: You can banish this card from your hand or GY, then target 1 card your opponent controls; return it to the hand. You can only use each effect of \"Tenyi Spirit - Vishuda\" once per turn.",
+          "atk": 1500,
+          "def": 2500,
+          "level": 7,
+          "race": "Wyrm",
+          "attribute": "DARK",
+          "imageUrl": "https://storage.googleapis.com/ygoprodeck.com/pics/23431858.jpg",
           "owned": true
         },
         {
@@ -783,7 +848,7 @@
           "desc": "When your opponent activates a Trap Card: Negate the activation, and if you do, Set that card face-down, then they can Set 1 other Trap directly from their Deck. For the rest of this turn after this card resolves, your opponent cannot activate Trap Cards. You can activate this card from your hand by paying half your LP.",
           "race": "Counter",
           "imageUrl": "https://ygoprodeck.com/pics/23002292.jpg",
-          "owned": false
+          "owned": true
         },
         {
           "id": 12,
