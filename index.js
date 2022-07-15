@@ -697,9 +697,51 @@ const setResults = (results, lowBound, upBound) => {
     resultCard7stats.textContent = `ATK/${currResults[7].atk} DEF/${currResults[7].def}`;
 }
 
+const clearResults = () => {
+    resultCard0img.src = "";
+    resultCard0title.textContent = "";
+    resultCard0details.textContent = "";
+    resultCard0stats.textContent = "";
+
+    resultCard1img.src = "";
+    resultCard1title.textContent = "";
+    resultCard1details.textContent = "";
+    resultCard1stats.textContent = "";
+    resultCard2img.src = "";
+    resultCard2title.textContent = "";
+    resultCard2details.textContent = "";
+    resultCard2stats.textContent = "";
+
+    resultCard3img.src = "";
+    resultCard3title.textContent = "";
+    resultCard3details.textContent = "";
+    resultCard3stats.textContent = "";
+
+    resultCard4img.src = "";
+    resultCard4title.textContent = "";
+    resultCard4details.textContent = "";
+    resultCard4stats.textContent = "";
+
+    resultCard5img.src = "";
+    resultCard5title.textContent = "";
+    resultCard5details.textContent = "";
+    resultCard5stats.textContent = "";
+
+    resultCard6img.src = "";
+    resultCard6title.textContent = "";
+    resultCard6details.textContent = "";
+    resultCard6stats.textContent = "";
+
+    resultCard7img.src = "";
+    resultCard7title.textContent = "";
+    resultCard7details.textContent = "";
+    resultCard6stats.textContent = "";
+}
+
 searchBar.addEventListener('submit', async (event) => {
     event.preventDefault();
     results = []; //empty array
+    clearResults();
     const searchParam = searchBar['card-name'].value;
     if (searchParam != '') {
         results = await fetchSearch(searchParam.toLowerCase());
