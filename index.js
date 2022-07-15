@@ -58,7 +58,9 @@ const ownedBtn = document.querySelector("#selected-card-info > button");
 const searchBar = document.querySelector('#card-search-bar');
 const prevBtn = document.querySelector('#left-button');
 const nextBtn = document.querySelector('#right-button');
-const sortBtn = document.querySelector('#sort-btn')
+const saveBtn = document.querySelector('#save-btn')
+const sortBtn = document.querySelector('#sort-btn');
+const deleteBtn = document.querySelector('#delete-btn');
 
 
 //API CALL: fetch request to search by card's name
@@ -1064,7 +1066,6 @@ setInterval(() => {
     document.getElementById('owned-card-count').textContent = `Owned: ${numCardsOwned}`
 }, 100);
 
-const saveBtn = document.querySelector('#save-btn')
 saveBtn.addEventListener('click', () => {
     alert('deck saved')
     fetch(`${decksUrl}`, {
@@ -1082,6 +1083,29 @@ saveBtn.addEventListener('click', () => {
     })
 })
 
+deleteBtn.addEventListener('click', () => {
+    if(confirm('Are you sure you want to delete your deck?')) {
+        mainDeck = [];
+        extraDeck = [];
+        sideDeck = [];
+        
+        fetch(`${decksUrl}`, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                deck: {
+                    mainDeck: mainDeck,
+                    extraDeck: extraDeck,
+                    sideDeck: sideDeck
+                }
+            })
+        }).then(
+            renderDeck()
+        )
+    }
+})
 
 
 populateDecks(initalizeDeck);
