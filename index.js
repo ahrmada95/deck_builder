@@ -175,7 +175,6 @@ const renderMainDeck = () => {
             cardViewName.textContent = something.name
             cardViewAttributes.textContent = `[${something.race}/${something.type.split(' ')[0]}]`
             cardEffects.textContent = something.desc
-            console.log(something)
             let prices = await getPrices(something.cardId);
             cardMarketPrice.textContent = `Cardmarket: $${prices[0]}`;
             tcgPlayerPrice.textContent = `TCG Player: $${prices[1]}`;
@@ -451,6 +450,8 @@ const updateDeckSelector = async () => {
 
 const resultCard = []
 
+
+const resultCard0 = document.querySelector('#result-card-0');
 const resultCard0img = document.querySelector("#result-card-0 > div.result-img-container > img");
 const resultCard0title = document.querySelector("#result-card-0 > div.result-text-container > p.search-card-title");
 const resultCard0details = document.querySelector("#result-card-0 > div.result-text-container > p.search-card-details");
@@ -785,7 +786,6 @@ resultCard0.addEventListener('click', async(event) => {
         cardViewImg.src = resultCard0img.src;
         cardViewName.textContent = resultCard0title.textContent;
         const selectedCard = await fetchByName(resultCard0title.textContent);
-        console.log(selectedCard.id);
         cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
         cardEffects.textContent = selectedCard.desc;
         let prices = await getPrices(selectedCard.id);
@@ -809,7 +809,6 @@ resultCard1.addEventListener('click', async(event) => {
         cardViewImg.src = resultCard1img.src;
         cardViewName.textContent = resultCard1title.textContent;
         const selectedCard = await fetchByName(resultCard1title.textContent);
-        console.log(selectedCard.id);
         cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
         cardEffects.textContent = selectedCard.desc;
         let prices = await getPrices(selectedCard.id);
@@ -833,7 +832,6 @@ resultCard2.addEventListener('click', async(event) => {
         cardViewImg.src = resultCard2img.src;
         cardViewName.textContent = resultCard2title.textContent;
         const selectedCard = await fetchByName(resultCard2title.textContent);
-        console.log(selectedCard.id);
         cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
         cardEffects.textContent = selectedCard.desc;
         let prices = await getPrices(selectedCard.id);
@@ -857,7 +855,6 @@ resultCard3.addEventListener('click', async(event) => {
         cardViewImg.src = resultCard3img.src;
         cardViewName.textContent = resultCard3title.textContent;
         const selectedCard = await fetchByName(resultCard3title.textContent);
-        console.log(selectedCard.id);
         cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
         cardEffects.textContent = selectedCard.desc;
         let prices = await getPrices(selectedCard.id);
@@ -881,7 +878,6 @@ resultCard4.addEventListener('click', async(event) => {
         cardViewImg.src = resultCard4img.src;
         cardViewName.textContent = resultCard4title.textContent;
         const selectedCard = await fetchByName(resultCard4title.textContent);
-        console.log(selectedCard.id);
         cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
         cardEffects.textContent = selectedCard.desc;
         let prices = await getPrices(selectedCard.id);
@@ -905,7 +901,6 @@ resultCard5.addEventListener('click', async(event) => {
         cardViewImg.src = resultCard5img.src;
         cardViewName.textContent = resultCard5title.textContent;
         const selectedCard = await fetchByName(resultCard5title.textContent);
-        console.log(selectedCard.id);
         cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
         cardEffects.textContent = selectedCard.desc;
         let prices = await getPrices(selectedCard.id);
@@ -929,7 +924,6 @@ resultCard6.addEventListener('click', async(event) => {
         cardViewImg.src = resultCard6img.src;
         cardViewName.textContent = resultCard6title.textContent;
         const selectedCard = await fetchByName(resultCard6title.textContent);
-        console.log(selectedCard.id);
         cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
         cardEffects.textContent = selectedCard.desc;
         let prices = await getPrices(selectedCard.id);
@@ -953,7 +947,6 @@ resultCard7.addEventListener('click', async(event) => {
         cardViewImg.src = resultCard7img.src;
         cardViewName.textContent = resultCard7title.textContent;
         const selectedCard = await fetchByName(resultCard7title.textContent);
-        console.log(selectedCard.id);
         cardViewAttributes.textContent = `[${selectedCard.race}/${selectedCard.type.split(' ')[0]}]`;
         cardEffects.textContent = selectedCard.desc;
         let prices = await getPrices(selectedCard.id);
@@ -1086,7 +1079,7 @@ saveBtn.addEventListener('click', () => {
                 sideDeck: sideDeck
             }
         })
-    }).then(console.log('here'))
+    })
 })
 
 
