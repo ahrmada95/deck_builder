@@ -738,7 +738,7 @@ const clearResults = () => {
     resultCard7img.src = "";
     resultCard7title.textContent = "";
     resultCard7details.textContent = "";
-    resultCard6stats.textContent = "";
+    resultCard7stats.textContent = "";
 }
 
 searchBar.addEventListener('submit', async (event) => {
